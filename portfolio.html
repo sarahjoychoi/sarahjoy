@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="img/fav2.png">
+    <style>
+        /* CSS Styles */
+        body {margin: 0; padding: 0; font-family: Helvetica, sans-serif;}
+        *::-webkit-scrollbar {display: none;}
+        header {padding: 20px; margin-left: 50%; font-size: 10pt;}
+        button {color: hotpink; background-color: white; cursor: pointer; border: none;}
+        nav {text-align: left; position: fixed; top: 160px; left: 10px; font-size: 10pt; display: flex; flex-direction: row;}
+
+		nav .column {flex: 1;}
+        nav a {display: block;}
+        a {text-decoration: none; margin: 10px; color: black; line-height: 11.5pt;}
+        nav a:hover, .link{color: hotpink; text-decoration: none;}
+        .link {margin: 0px;}
+        .link:hover {color: black;}
+        #emerging {color: #E00273;}
+        #paris {color: #0501F7;}
+        #still {color: #7BAEEB;}
+
+        .column-1 {font-weight: bold;}
+        .column-2 {margin-top: 12px; margin-left: -65px; width: 250px;}
+        #nav-2 {margin-top: 136px;}
+        #nav-3 {margin-top: 62px;}
+
+        .line {padding: 0; margin: 0; width: 100px; height: 1px; background-color: black; position: absolute;}
+        .line-1 {margin-left: 42px; top: 17px; width: 110px;}
+        .line-2 {margin-left: 95px; top: 169px; width: 58px;}
+        .line-3 {margin-left: 47px; top: 246px; width: 104px;}
+
+
+        #triangle-indicator {position: absolute; width: 0; height: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 8px solid black; margin-left: 105px; transition: top 0.3s ease;}
+        .content {padding: 0;}
+        .section {margin-left: 30%; overflow-x: scroll;}
+        .section-title {font-size: 10pt; padding-top: 40px; margin-bottom: 10px;}
+        .section-description {font-size: 10pt; line-height: 13pt; margin-bottom: 20px;}
+
+        .sub-section {margin-bottom: 20px;}
+        .sub-content {flex-direction: column; align-items: center; overflow-x: auto; white-space: nowrap;}
+        footer {height: 100px;}
+
+        video, img {height: 580px; margin-right: 20px;}
+        .white {border: 0.5px solid black;}
+        @media screen and (max-width: 1200px) {video, img {height: 500px;}}
+	    @media screen and (max-width: 1000px) {video, img {height: 450px; margin-right: 2px;}}
+	    @media screen and (max-width: 900px) {
+        	video, img {height: 200px;}
+	        nav {display: none;}
+	        header {margin-left: 30%;}
+	        .section {margin-left: 2%;}}
+
+    </style>
+</head>
+<body>
+    <header>
+    <div class="language kr">
+      <p><span id="sarah">최연경 (세라)</span> 서울 태생, 미국 켄트스쿨 졸업, 프랑스 파리파슨스 졸업, 현 독일 함부르크 거주하는 디자이너 이자 연구자.</p>
+      <p>현 <a href="https://waf.gmbh/" class="link">WAF GMBH</a> 웹디자인 회사의 인턴이며, 정규직 포지션을 찾고 있음.</p> 
+    </div>
+    <div class="language en">
+      <p><span id="sarah">Sarah Yeonkyung Choi</span> is a designer and researcher from Seoul, South Korea, who receieved her BFA from Parsons Paris and currently lives and works in Hamburg, Germany.</p>
+      <p>She is currently an intern at <a href="https://waf.gmbh/" class="link">WAF GMBH</a>.</p> 
+    </div>
+    <div class="language fr">
+      <p><span id="sarah">Sarah Yeonkyung Choi</span> est graphiste de Séoul, Corée du Sud, diplômée de Parsons Paris qui vit et travaille actuellement à Hambourg, Allemagne.</p>
+      <p>Elle est actuellement stagiaire chez <a href="https://waf.gmbh/" class="link">WAF GMBH</a>.</p> 
+    </div>
+      <button data-type="kr">한국어</button>
+      <button data-type="en">english</button>
+      <button data-type="fr">français</button>
+    </header>
+
+    <nav>
+    	<div class="column column-1">
+		        <a href="#section1" id="nav-1">web</a>
+		        <a href="#section2" id="nav-2">social media</a>
+		        <a href="#section3" id="nav-3">print</a>
+	        <div class="line line-1"></div>
+		    <div class="line line-2"></div>
+		    <div class="line line-3"></div>
+	    </div>
+
+        <div id="triangle-indicator"></div>
+
+        <div class="column column-2">
+	        <a href="#web1" onclick="restartVideo('web1')">portfolio ver. 2</a>
+	        <a href="#web2" onclick="restartVideo('web2')">WAF NEU</a>
+	        <a href="#web3" onclick="restartVideo('web3')">119 avenue parmentier</a>
+	        <a href="#web4" onclick="restartVideo('web4')">LOVEBUG</a>
+	        <a href="#web5" onclick="restartVideo('web5')">SHSIA portfolio</a>
+	        <a href="#web6" onclick="restartVideo('web6')">E-MERGING article</a>
+	        <a href="#poster1">PARIS, PARIS cocktails</a>
+	        <a href="#poster2">STILLLIFE art fair</a>
+	        <a href="#poster3">instagram posters</a>
+	        <a href="#book1" onclick="restartVideo('book1')">the city book</a>
+	        <a href="#book2" onclick="restartVideo('book2')">the love book</a>
+	        <a href="#book3">the punctuation book</a>
+	    </div>
+    </nav>
+
+    <div class="content">
+        <section id="section1" class="section">
+
+            <div id="web1" class="sub-section">
+            	<div class="language kr"> 
+	                <h3 class="section-title">portfolio ver. 2</h3>
+	                <p class="section-description">이 웹사이트는 탐험을 구현하여, 커서의 움직임이 고안된 사물을 탐색하는 데 이용됨.<br>Javascript, HTML & CSS.</p>
+	            </div>
+	            <div class="language en"> 
+	                <h3 class="section-title">portfolio ver. 2</h3>
+	                <p class="section-description">Portfolio website inviting exploration, where cursor movement corresponds to positioning within a designated container.<br>Javascript, HTML & CSS.</p>
+	            </div>
+	            <div class="language fr"> 
+	                <h3 class="section-title">book n. 2</h3>
+	                <p class="section-description">Site portfolio invitant à l'exploration, où le mouvement du curseur correspond à la position à l'intérieur d'un conteneur désigné.<br>Javascript, HTML & CSS.</p>
+	            </div>
+                <div class="sub-content">
+                	<video autoplay muted class="white">
+		              <source src="img2/portfolio.mov" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		            </video>
+		            <img src="img2/portfolio1.png" class="white" alt="Portfolio 1">
+		            <img src="img2/portfolio2.png" class="white" alt="Portfolio 2">
+		            <img src="img2/portfolio3.png" class="white" alt="Portfolio 3">
+		        </div>
+            </div>
+
+            <div id="web2" class="sub-section">
+            	<div class="language kr"> 
+	                <h3 class="section-title">WAF NEU</h3>
+	                <p class="section-description">(진행중, 공동작업) WAF GMBH의 새 웹사이트는 고객 중심으로 웹페이지를 구축했던 기존 방식과 다르게 프로젝트 목록별로 구성하는 새로운 방식으로 구성됩니다.<br>구조화된 분류보다는 작업의 맥락과 주변상황을 쇼케이스식으로 표현하는 마치 기술을 시적관점으로 접근하는 방식입니다.<br>CMS: Kirby</p>
+	            </div>
+	            <div class="language en"> 
+	                <h3 class="section-title">WAF NEU</h3>
+	                <p class="section-description">(In-progress, collaborative) WAF GMBH's new website centers around a list of projects, shifting the focus away from clients as done previously.<br>Seeing technology as poetry, the work's context and circumstances take the forefront, showcased anecdotally rather than in structured case studies.<br>CMS: Kirby</p>
+	            </div>
+	            <div class="language fr"> 
+	                <h3 class="section-title">WAF NEU</h3>
+	                <p class="section-description">(En cours, collaboratif) La nouvelle site web de WAF GMBH met l'accent sur une liste de projets, déplaçant ainsi l'attention des clients comme c'était le cas auparavant.<br>En considérant la technologie comme de la poésie, le contexte et les circonstances du travail prennent le devant de la scène, présentés de manière anecdotique plutôt que dans des études de cas structurées.<br>CMS: Kirby</p>
+	            </div>
+                <div class="sub-content">
+	              <video autoplay muted class="white">
+		              <source src="img2/waf.mov" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		            </video>
+	              <img src="img2/waf1.png" class="white" alt="Process 1">
+	              <img src="img2/waf2.png" alt="Process 2">
+	              <img src="img2/waf3.png" alt="Process 3">
+	            </div>
+	        </div>
+
+
+	        <div id="web3" class="sub-section">
+	        	<div class="language kr">
+	                <h3 class="section-title">119 avenue parmeniter</h3>
+	                <p class="section-description">원통 그물망을 이용한 디지털 공간에서 움직임을 어떤 사람의 침실의 HDR의 이미지로 구현함.<br>WebGL, Javascript, HTML & CSS.</p>
+	             </div>
+	             <div class="language en">
+	                <h3 class="section-title">119 avenue parmeniter</h3>
+	                <p class="section-description">Relating movement to space in the digital sphere through a cylinder mesh that uses as its environment map an HDR of someone's bedroom.<br>WebGL, Javascript, HTML & CSS.</p>
+	             </div>
+	             <div class="language fr">
+	                <h3 class="section-title">119 avenue parmeniter</h3>
+	                <p class="section-description">Reliant le mouvement à l'espace dans la sphère numérique à travers un maillage cylindrique.<br>WebGL, Javascript, HTML & CSS.</p>
+	             </div>
+                <div class="sub-content">
+	              <video autoplay muted class="grid-video">
+		              <source src="img2/parmentier.mov" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		            </video>
+	              <img src="img2/parmentier1.png" alt="WebGL 1">
+	              <img src="img2/parmentier2.png" alt="WebGL 2">
+	              <img src="img2/parmentier3.png" alt="WebGL 3">
+	            </div>
+	        </div>
+
+	        <div id="web4" class="sub-section">
+	        	<div class="language kr">
+	                <h3 class="section-title">LOVEBUG</h3>
+	                <p class="section-description">스토리텔링을 공간적으로 구현하며 인터넷을 집처럼 탐색한 웹사이트. 글과 음성이 3D 모델내에서 구현됨.<br>WebGL, Javascript, HTML & CSS.</p>
+	            </div>
+	            <div class="language en">
+	                <h3 class="section-title">LOVEBUG</h3>
+	                <p class="section-description">A web-based exploration of storytelling as a spatial practice and of the internet as home. Text and audio hosted within 3D models.<br>WebGL, Javascript, HTML & CSS.</p>
+	            </div>
+	            <div class="language fr">
+	                <h3 class="section-title">LOVEBUG</h3>
+	                <p class="section-description">Une exploration basée sur le web de la narration comme pratique spatiale et de l'internet comme foyer. Texte et audio intégrés dans des modèles 3D.<br>WebGL, Javascript, HTML & CSS.</p>
+	            </div>
+                <div class="sub-content">
+	              <video autoplay muted class="white">
+		              <source src="img2/lovebug.mov" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		            </video>
+	              <img src="img2/lovebug1.png" class="white" alt="WebGL 4">
+	              <img src="img2/lovebug2.png" class="white" alt="WebGL 5">
+	              <img src="img2/lovebug3.png" class="white" alt="WebGL 6">
+	            </div>
+	        </div>
+
+            <div id="web5" class="sub-section">
+            	<div class="language kr">
+	                <h3 class="section-title">SHSIA portfolio</h3>
+	                <p class="section-description">검은 모레스킨 노트북에 그림을 그리는 아티스트 SHSIA를 위한 상호 작용형 포트폴리오 웹사이트.<br>Javascript, HTML & CSS.</p>
+	            </div>
+	            <div class="language en">
+	                <h3 class="section-title">SHSIA portfolio</h3>
+	                <p class="section-description">An interactive portfolio website for an artist who predominantly draws in his black moleskine notebook.<br>Javascript, HTML & CSS.</p>
+	            </div>
+	            <div class="language fr">
+	                <h3 class="section-title">site web de SHSIA</h3>
+	                <p class="section-description">Un site web interactif montrant pour un artiste qui dessine principalement dans son carnet noir Moleskine.<br>Javascript, HTML & CSS.</p>
+	            </div>
+                <div class="sub-content">
+	              <video autoplay muted class="white">
+		              <source src="img2/stanley1.mov" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		          </video>
+		          <video autoplay muted class="white">
+		              <source src="img2/stanley2.mov" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		          </video>
+		          <video autoplay muted class="white">
+		              <source src="img2/stanley3.mov" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		          </video>
+		          <video autoplay muted class="white">
+		              <source src="img2/stanley4.mov" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		          </video>
+		          <video autoplay muted class="white">
+		              <source src="img2/stanley5.mov" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		          </video>
+            	</div>
+            </div>
+
+            <div id="web6" class="sub-section">
+            	<div class="language kr">
+	                <h3 class="section-title">E-MERGING article</h3>
+	                <p class="section-description">Telekom Electronic Beats의 E-MERGING 시리즈 중 <a href="https://www.electronicbeats.net/e-merging-get-to-know-michele-rizzo-and-his-hypnotic-performance-art/" class="link" id="emerging">Michele Rizzo에 대한 웹 기사</a>를 위한 비디오 중심의 상호 작용형 레이아웃.<br>Javascript, HTML & CSS.</p>
+	            </div>
+	            <div class="language en">
+	                <h3 class="section-title">E-MERGING article</h3>
+	                <p class="section-description">A playful, video-centric layout for <a href="https://www.electronicbeats.net/e-merging-get-to-know-michele-rizzo-and-his-hypnotic-performance-art/" class="link" id="emerging">an online article on Michele Rizzo</a>, as part of Telekom Electronic Beats' E-MERGING series.<br>Javascript, HTML & CSS.</p>
+	            </div>
+	            <div class="language fr">
+	                <h3 class="section-title">article E-MERGING</h3>
+	                <p class="section-description">Une mise en page ludique centrée sur la vidéo <a href="https://www.electronicbeats.net/e-merging-get-to-know-michele-rizzo-and-his-hypnotic-performance-art/" class="link" id="emerging">un article web sur Michele Rizzo</a> dans le cadre de la série E-MERGING de Telekom Electronic Beats.<br>Javascript, HTML & CSS.</p>
+	            </div>
+                <div class="sub-content">
+	              <video autoplay muted class="grid-video">
+		              <source src="img2/emerging.mov" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		            </video>
+	              <img src="img2/emerging1.png" alt="Web 1">
+	            </div>
+	        </div>
+
+        </section>
+
+        <section id="section2" class="section">
+
+             <div id="poster1" class="sub-section">
+             	<div class="language kr">
+	                <h3 class="section-title">PARIS, PARIS</h3>
+	                <p class="section-description">파리 기반 디자이너 빈티지 스토어 <a href="https://www.instagram.com/___parisparis/" class="link" id="paris">PARIS, PARIS</a>의 쇼룸 런칭을 홍보하기 위해 계정의 인스타그램 스토리에 사용된 포스터들.</p>
+                </div>
+                <div class="language en">
+	                <h3 class="section-title">PARIS, PARIS</h3>
+	                <p class="section-description">Posters for Instagram stories announcing the showroom launch of designer vintage shop, <a href="https://www.instagram.com/___parisparis/" class="link" id="paris">PARIS, PARIS</a>.</p>
+                </div>
+                <div class="language fr">
+	                <h3 class="section-title">PARIS, PARIS</h3>
+	                <p class="section-description">Affiches pour les stories Instagram annonçant le lancement du showroom de la boutique de vêtements vintage de luxe, <a href="https://www.instagram.com/___parisparis/" class="link" id="paris">PARIS, PARIS</a>.</p>
+                </div>
+                <div class="sub-content">
+	                <video autoplay loop muted class="grid-video">
+		              <source src="img2/parisparis1.mp4" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		            </video>
+	                <video autoplay loop muted class="grid-video">
+		              <source src="img2/parisparis2.mp4" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		            </video>
+		            <video autoplay loop muted class="grid-video">
+		              <source src="img2/parisparis3.mp4" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		            </video>
+	       		</div>
+            </div>
+
+            <div class="sub-section" id="poster2">
+            	<div class="language kr">
+	                <h3 class="section-title">STILLLIFE</h3>
+	                <p class="section-description">뉴욕에서 개최된 실험적인 아트 페어 2022 <a href="https://www.instagram.com/stilllife.stilllife/" class="link" id="still">STILLLIFE</a>를 홍보한 모션 포스터.</p>
+	            </div>
+	            <div class="language en">
+	                <h3 class="section-title">STILLLIFE</h3>
+	                <p class="section-description">Motion poster for <a href="https://www.instagram.com/stilllife.stilllife/" class="link" id="still">STILLLIFE</a>'s 2022 experimental art fair that took place in New York.</p>
+	            </div>
+	            <div class="language fr">
+	                <h3 class="section-title">STILLLIFE</h3>
+	                <p class="section-description">Affiche animée pour <a href="https://www.instagram.com/stilllife.stilllife/" class="link" id="still">STILLLIFE</a>, une foire d'art expérimental qui a eu lieu à New York en 2022.</p>
+	            </div>
+                <div class="sub-content">
+	                <img src="img2/stilllife1.gif" class="white" alt="Poster 3">
+	                <img src="img2/stilllife2.gif" class="white" alt="Poster 4">
+	            </div>
+	        </div>
+
+            <div class="sub-section" id="poster3">
+            	<div class="language kr">
+	                <h3 class="section-title">instagram posters</h3>
+	                <p class="section-description">“좋아요를 충분히 받지 못한 사진을 내리는 것을 두려워하지 마라”와 같은 ‘무언의 규칙’을 통해 인스타그램의 현실 왜곡에 대한 주의를 호소하는 포스터.</p>
+	            </div>
+	            <div class="language en">
+	                <h3 class="section-title">instagram posters</h3>
+	                <p class="section-description">Posters bringing to attention Instagram's distortion of reality through 'unspoken rules' such as the following: "Don't be afraid to take down a photo if it doesn't get enough likes".</p>
+	            </div>
+	            <div class="language fr">
+	                <h3 class="section-title">affiches instagram</h3>
+	                <p class="section-description">Affiches attirant l'attention sur la distorsion de la réalité par Instagram à travers des 'règles non dites' telles que "N'ayez pas peur de retirer une photo si elle n'obtient pas assez de mentions 'j'aime'".</p>
+	            </div>
+                <div class="sub-content">
+                	<img src="img2/poster1.jpg" class="white" alt="Poster 1">
+                	<img src="img2/poster2.jpg" class="white" alt="Poster 2">
+                </div>
+            </div>
+        </section>
+
+        <section id="section3" class="section">
+            <div class="sub-section" id="book1">
+            	<div class="language kr">
+	                <h3 class="section-title">the city book</h3>
+	                <p class="section-description">우연한 만남이라는 아이디어를 도시 경험으로 구현한 책. 보행자 경로 나타내기 위해 실 사용.<br>1판. 퍼펙트 바인딩, 25cm x 20cm, 44 페이지, 250gsm.</p>
+	            </div>
+	            <div class="language en">
+	                <h3 class="section-title">the city book</h3>
+	                <p class="section-description">A book the embodies the experience of the city through the idea of chance encounters. Thread used to map out paths of pedestrians.<br>Unique edition, Perfect binding, 25cm x 20cm, 44 pages, 250 gsm.</p>
+	            </div>
+	            <div class="language fr">
+	                <h3 class="section-title">le livre de la ville</h3>
+	                <p class="section-description">Un livre qui incarne l'expérience de la ville à travers l'idée de rencontres fortuites. Du fil est utilisé pour tracer les chemins des piétons.<br>Édition unique, reliure parfaite, 25cm x 20cm, 44 pages, 250gsm.</p>
+	            </div>
+                <div class="sub-content">
+                	<video autoplay muted>
+		              <source src="img2/city.mov" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		            </video>
+		            <img src="img2/city1.jpg" alt="Book page 1">
+		            <img src="img2/city2.jpg" alt="Book page 2">
+		            <img src="img2/city3.jpg" alt="Book page 3">
+		            <img src="img2/city4.jpg" alt="Book page 4">
+		            <img src="img2/city5.jpg" alt="Book page 5">
+		        </div>
+            </div>
+
+            <div class="sub-section" id="book2">
+            	<div class="language kr">
+	                <h3 class="section-title">the love book</h3>
+	                <p class="section-description">관계의 시작부터 끝까지 두 사람 간의 편지. 영어와 불어.<br>3판. 드럼 리프 바인딩, 3.5인치 x 5.5인치, 40 페이지, 250gsm.</p>
+	            </div>
+	            <div class="language en">
+	                <h3 class="section-title">the love book</h3>
+	                <p class="section-description">A correspondence between two people from the beginning to the end of their relationship. In English and French.<br>Edition of 3, Drum leaf binding, 3.5in x 5.5in (8.9cm x 14 cm), 40 pages, 250gsm.</p>
+	            </div>
+	            <div class="language fr">
+	                <h3 class="section-title">le livre d'amour</h3>
+	                <p class="section-description">Une correspondance entre deux personnes du début à la fin de leur relation. En anglais et en français.<br>Édition de 3, reliure en feuille de tambour, 3,5 pouces x 5,5 pouces (8,9 cm x 14 cm), 40 pages, 250gsm.</p>
+	            </div>
+                <div class="sub-content">
+	                <video autoplay muted>
+		              <source src="img2/love.mov" type="video/mp4">
+		              당신의 브라우저는 video태그를 지원하지 않습니다.
+		            </video>
+		            <img src="img2/love1.jpg" alt="Book page 6">
+		            <img src="img2/love2.jpg" alt="Book page 7">
+		            <img src="img2/love3.jpg" alt="Book page 8">
+		            <img src="img2/love4.jpg" alt="Book page 9">
+		            <img src="img2/love5.jpg" alt="Book page 10">
+		        </div>
+            </div>
+
+            <div class="sub-section" id="book3">
+            	<div class="language kr">
+	                <h3 class="section-title">the punctuation book</h3>
+	                <p class="section-description">시를 페이지당 한 문장씩 배치. 무작위로 페이지 배열하여 제본. 강조를 위해 문장 부호 크기 조절, 거울 이미지가 전체 문장의 유령처럼 반대편에 재현됨.<br>1판. 퍼펙트 바인딩, 10cm x 18cm, 56 페이지, 120gsm.</p>
+	            </div>
+	            <div class="language en">
+	                <h3 class="section-title">the punctuation book</h3>
+	                <p class="section-description">Poem split into one phrase per page. Pages assorted randomly then bound. Punctuation scaled for emphasis, and its mirror-image reproduced on the verso as a 'ghost' of the full text.<br>Unique edition, Perfect binding, 10cm x 18cm, 56 pages, 120gsm.</p>
+	            </div>
+	            <div class="language fr">
+	                <h3 class="section-title">tle livre de la ponctuation</h3>
+	                <p class="section-description">Poème divisé en une phrase par page. Pages triées aléatoirement puis reliées. La ponctuation est agrandie pour mettre l'accent, et son image miroir est reproduite sur le verso comme un 'fantôme' du texte intégral.<br>Édition unique, reliure parfaite, 10cm x 18cm, 56 pages, 120gsm.</p>
+	            </div>
+                <div class="sub-content">
+		            <img src="img2/comma1.png" alt="Book page 11">
+		            <img src="img2/comma2.png" alt="Book page 12">
+		            <img src="img2/comma3.png" alt="Book page 13">
+		            <img src="img2/comma4.png" alt="Book page 14">
+		        </div>
+
+            </div>
+        </section>
+        <footer></footer>
+    </div>
+    <script>
+    // toggle between language
+	const languageDivs = document.querySelectorAll('.language');
+	const languageButtons = document.querySelectorAll('button[data-type]');
+
+	function showLanguage(languageType) {
+	  languageDivs.forEach((div) => {
+	    if (div.classList.contains(languageType)) {
+	      div.style.display = 'block';
+	    } else {
+	      div.style.display = 'none';
+	    }
+	  });
+	}
+
+	showLanguage('kr');
+
+
+	languageButtons.forEach((button) => {
+	  button.addEventListener('click', (event) => {
+	    const languageType = event.target.getAttribute('data-type');
+	    showLanguage(languageType);
+	  });
+	});
+
+
+	// restart video when anchor tag is clicked
+    function restartVideo(sectionId) {
+            const videoElement = document.getElementById(sectionId).querySelector('video');
+            
+            if (videoElement) {
+                videoElement.currentTime = 0;
+                videoElement.play();
+            }
+        }
+
+    // toggle pause/play video on click 
+	const videoElements = document.querySelectorAll('video');
+
+	function toggleVideo(event) {
+	    const video = event.target;
+	    
+	    if (video.paused) {
+	        video.play();
+	    } else {
+	        video.pause();
+	    }
+	}
+
+	videoElements.forEach((video) => {
+	    video.addEventListener('click', toggleVideo);
+	});
+
+	// align triangle indicator with nav 
+	const triangleIndicator = document.getElementById('triangle-indicator');
+	    const navLinks = document.querySelectorAll('nav .column-2 a');
+
+	    function updateTrianglePosition(targetLink) {
+	        const linkRect = targetLink.getBoundingClientRect();
+	        const navRect = document.querySelector('nav').getBoundingClientRect();
+	        triangleIndicator.style.top = linkRect.top - navRect.top + 'px';
+	    }
+	  
+	    navLinks.forEach((link) => {
+	        link.addEventListener('click', (event) => {
+	            event.preventDefault();
+	            const href = event.target.getAttribute('href');
+	            const targetSection = document.querySelector(href);
+	            window.scrollTo({
+	                top: targetSection.offsetTop - triangleIndicator.clientHeight,
+	                behavior: 'smooth',
+	            });
+	    
+	            updateTrianglePosition(event.target);
+	        });
+	    });
+   
+    const initialLink = document.querySelector('a[href="#web1"]');
+    updateTrianglePosition(initialLink);
+
+    window.addEventListener('scroll', () => {
+        const activeLink = Array.from(navLinks).find((link) => {
+            const href = link.getAttribute('href');
+            const targetSection = document.querySelector(href);
+            const targetRect = targetSection.getBoundingClientRect();
+            return targetRect.top <= 50 && targetRect.bottom >= 50;
+        });
+        if (activeLink) {
+            updateTrianglePosition(activeLink);
+        }
+    });
+    </script>
+</body>
+</html>

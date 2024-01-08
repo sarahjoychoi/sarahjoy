@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sarah joy</title>
+	<link rel="shortcut icon" type="image/png" href="img/fav.png">
+	<style>
+	body {
+		margin: 0;
+		overflow: hidden;
+	}
+
+	.area {
+		width: 200%;
+		height: 200%;
+		position: absolute;
+		/*border: 1px solid black;*/
+		transform: translate(-50%, -50%);
+		transition: transform 0.15s linear;
+	}
+
+	.item {
+		position: absolute;
+		background-size: contain;
+  		background-repeat: no-repeat;
+  		background-position: center center;
+  		cursor: pointer;
+	}
+/* note */
+	.item-1 {
+		top: -5%;
+		left: 20%;
+		width: 220px;
+		height: 200px;
+		background-image: url('img/item1.png');
+	}
+
+/* the love book */
+	.item-2 {
+		top: 0;
+		right: 0;
+		width: 500px;
+		height: 270px;
+		background-image: url('img/item2.png');
+	}
+
+/* the city book */
+	.item-3 {
+		bottom: -5%;
+		left: 0%;
+		width: 600px;
+		height: 450px;
+		background-image: url('img/item3.png');
+	}
+
+/* the punctuation book */
+	.item-4 {
+		bottom: 7%;
+		right: 15%;
+		width: 350px;
+		height: 360px;
+		background-image: url('img/item4.png');
+		transform: rotate(3deg);
+	}
+
+/* the macbook */
+	.item-5 {
+		top: 20%;
+		left: 40%;
+		width: 600px;
+		height: 600px;
+		background-image: url('img/item5.png');
+	}
+
+/* sammy and suzie 
+	.item-6 {
+		top: 5%;
+		left: 0%;
+		width: 400px;
+		height: 300px;
+		background-image: url('img/item6.jpg');
+	}
+*/
+
+/* coffeecup */
+	.item-7 {
+		top: 55%;
+		left: 25%;
+		width: 220px;
+		height: 220px;
+		background-image: url('img/item7.jpg');
+		cursor: auto;
+	}
+
+
+/* lightbox */
+.lightbox {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 95%;
+		height: 80%;
+		z-index: 9999;
+		/*background-color: rgba(0, 0, 0, 0.8);*/
+		display: none;
+		overflow-y: scroll;
+	}
+
+	.lightbox img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	.description {
+    overflow-y: scroll;
+    width: 50vw;
+    margin: auto;
+    text-align: center;
+    color: black;
+    font-family: Helvetica;
+    font-size: 8.5pt;
+	}
+
+	.project-statement{
+	text-align: left;
+	}
+
+	.lightbox::-webkit-scrollbar {
+	width: 0;
+	background-color: transparent;
+	}
+
+	.close-btn {
+		position: sticky;
+		top: 25px;
+		padding-left: 85vw;
+		color: black;
+		font-size: 30px;
+		cursor: pointer;
+	}
+
+	.lightbox-1 img{
+	height: 85%;
+	overflow-y: hidden;
+	}
+
+	.lightbox-6 img{
+	height: 95%;
+	}
+
+/*cv*/
+	.cv a{
+	text-decoration: none;
+	color: black;
+	font-family: Helvetica;
+	font-size: 8.5pt;
+	display: block;
+	padding: 2px;
+	padding-left: 15%;
+	}
+
+	.cv a:hover{
+	text-shadow: #006bf5 1px 0 10px;
+	}
+
+/*mac lightbox*/
+	.lightbox-5{
+	background-image: url('img/lightbox5.png');
+	height: 85%;
+	background-size: contain;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+
+	}
+
+	.lightbox-5 img {
+		height: 64vh;
+		width: 55vw;
+		top: 7vh;
+		left: 20vw;
+		position: fixed;
+	}
+
+/*mobile*/
+	@media screen and (max-width: 480px) {
+	  body {
+	    overflow-x: scroll;
+	    overflow-y: scroll;
+	  }
+	  body::-webkit-scrollbar {
+	    width: 0;
+	    background-color: transparent;
+	  }
+	}
+
+	</style>
+</head>
+<body>
+	<div class="area">
+	<!--objects-->
+		<!--about me-->
+		<div class="item item-1" onclick="showLightbox(1)"></div>
+		<!--the love book-->
+		<div class="item item-2" onclick="showLightbox(2)"></div>
+		<!--the city book-->
+		<div class="item item-3" onclick="showLightbox(3)"></div>
+		<!--the punctuation book-->
+		<div class="item item-4" onclick="showLightbox(4)"></div>
+		<!--the macbook-->
+		<div class="item item-5" onclick="showLightbox(5)"></div>
+		<!--sammy and suzie-->
+		<div class="item item-6" onclick="showLightbox(6)"></div>
+		<!--coffee-->
+		<div class="item item-7" onclick="showLightbox(7)"></div>
+	</div>
+	
+	<!--lightbox-->
+	<div class="lightbox lightbox-1">
+		<span class="close-btn" onclick="hideLightbox(1)">&times;</span>
+		<img src="" alt="" />
+		<div class="cv">
+			<a href="cv/CV_Sarah_CHOI 2023(en).pdf">download CV</a>
+		<!--	<a href="cv/CV_Sarah_CHOI 2023(fr).pdf">t&eacute;l&eacute;chargez le CV</a>-->
+		</div>
+	</div>
+
+	<div class="lightbox lightbox-2">
+		<span class="close-btn" onclick="hideLightbox(2)">&times;</span>
+		<img src="" alt="" />
+		<div class="description">
+		    <p>the love book, 2022</p>
+		    <p class="project-statement">Edition of 3 books, hand-made using drum leaf binding. A correspondence between two people from the beginning to the end of their relationship, incorporating cut-outs that protect their intimacy and their privacy. In English and French.</p>
+		</div>
+	</div>
+
+	<div class="lightbox lightbox-3">
+		<span class="close-btn" onclick="hideLightbox(3)">&times;</span>
+		<img src="" alt="" />
+		<div class="description">
+		    <p>the city book, 2022</p>
+		    <p>perfect bound book, cover paper and thread, 25cm x 20cm, 44 pages, 250 gsm</p>
+		    <p class="project-statement">A book about the city and all the chance encounters it provides daily. Inspired by Jerome Robbins' Glass Pieces, a mix of ballet and pedestrian movement, which begins with dancers walking hastily, purposefully, across the stage, intersecting but never meeting. pas de deux (pedestrian) takes the city as a stage and pedestrian crossings as choreography. Each line of thread represents a walking path, the thicker dash on one end marking the beginning and the knot denoting the end. Halfway, we are introduced to our protagonist, the red thread, and then, to the text, Haruki Murakami's "On Seeing the 100% Girl One Beautiful April Morning". Our protagonist recounts walking past a girl that he immediately recognises as 100% perfect for him but not having talked to her. He spends the rest of the story imagining different scenarios and conversations that they would've had. This book is modelled on New York City, but about any city, about the hundreds of urban encounters that we make on a daily basis, and the imagined possibilities of one encounter being the most important one of our lives but that we just don't know it yet. Speckled grey paper, cover stock, chosen to evoke the soiled concrete of sidewalks. Unique book. Printed using Inkjet. Sewn by hand. By Sarah Yeonkyung Choi, creator, designer, printer, and binder.</p>
+		</div>
+	</div>
+
+	<div class="lightbox lightbox-4">
+		<span class="close-btn" onclick="hideLightbox(4)">&times;</span>
+		<img src="" alt="" />
+		<div class="description">
+		    <p>the punctuation book, 2022</p>
+		    <p>Perfect bound book, text paper, and tracing paper, 18.2 cm x 10 cm, 55 pages, 90 gsm.</p>
+		    <p class="project-statement">Unique book. Poem made from phrases of Helen Mirra's Escritura-a-trav&eacute;s, then split into one phrase per page. Pages were assorted randomly then bound. Punctuation scaled for emphasis, and its mirror-image reproduced on the verso as a 'ghost' of the full text. The next punctuation is also included on each page to guide readers who want to read chronologically. This book is an interactive experiment on semiotics.</p>
+		   </div>
+	</div>
+
+	<div class="lightbox lightbox-5">
+		<span class="close-btn" onclick="hideLightbox(5)">&times;</span>
+		<img src="" alt="" />
+	</div>
+
+	<div class="lightbox lightbox-6">
+		<span class="close-btn" onclick="hideLightbox(6)">&times;</span>
+		<img src="" alt="" />
+		<div class="description">
+		    <p>sammy and suzie drafts, 2023-</p>
+		    <p class="project-statement">Sammy and Suzie are best friends. Sammy and Suzie are hopeless romantics who always seem to choose the wrong person and text-rant about it to each other the next morning. One day, Sammy and Suzie had an epiphany: their conversations about dating in your twenties are way too good to keep to themselves! They decided to create a magazine to broaden the conversation. The first issue touches upon dating apps, STDs, long-distance relationships, interracial relationships, and an exploration of the male socio-sexual hierarchy. Drawings by Stanley Hsia. Design and direction by Sarah Yeonkyung Choi. Ongoing work. Photos shown are drafts. Print is expected for sometime in May.</p>
+		</div>
+	</div>
+
+	<div class="lightbox lightbox-7">
+		<span class="close-btn" onclick="hideLightbox(7)">&times;</span>
+		<img src="" alt="" />
+	</div>
+
+	<script>
+		const area = document.querySelector('.area');
+		const items = document.querySelectorAll('.item');
+
+		// lightbox
+		let currentLightbox = null;
+		let currentImageIndex = 0;
+		let maxImageIndex = 0;
+		let images = [];
+
+//show lightbox
+function showLightbox(num) {
+  // get corresponding lightbox and images
+  currentLightbox = document.querySelector('.lightbox-' + num);
+  const lightboxImages = {
+    1: ['img/lightbox-1-image-1.png'],
+    2: ['img/lightbox-2-image-1.jpg', 'img/lightbox-2-image-2.jpg',
+     	'img/lightbox-2-image-3.jpg', 'img/lightbox-2-image-4.jpg',
+     	'img/lightbox-2-image-5.jpg', 'img/lightbox-2-image-6.jpg',
+     	'img/lightbox-2-image-7.jpg', 'img/lightbox-2-image-8.jpg',
+     	'img/lightbox-2-image-9.jpg', 'img/lightbox-2-image-10.jpg',
+     	'img/lightbox-2-image-11.jpg', 'img/lightbox-2-image-12.jpg',
+     	'img/lightbox-2-image-13.jpg', 'img/lightbox-2-image-14.jpg',
+     	'img/lightbox-2-image-15.jpg', 'img/lightbox-2-image-16.jpg',
+     	'img/lightbox-2-image-17.jpg', 'img/lightbox-2-image-18.jpg',
+     	'img/lightbox-2-image-19.jpg', 'img/lightbox-2-image-20.jpg',
+     	'img/lightbox-2-image-21.jpg', 'img/lightbox-2-image-22.jpg'],
+    3: ['img/lightbox-3-image-1.jpg', 'img/lightbox-3-image-2.jpg',
+     	'img/lightbox-3-image-3.jpg', 'img/lightbox-3-image-4.jpg',
+     	'img/lightbox-3-image-5.jpg', 'img/lightbox-3-image-6.jpg',
+     	'img/lightbox-3-image-7.jpg', 'img/lightbox-3-image-8.jpg',
+     	'img/lightbox-3-image-9.jpg', 'img/lightbox-3-image-10.jpg',
+     	'img/lightbox-3-image-11.jpg', 'img/lightbox-3-image-12.jpg',
+     	'img/lightbox-3-image-13.jpg', 'img/lightbox-3-image-14.jpg',
+     	'img/lightbox-3-image-15.jpg', 'img/lightbox-3-image-16.jpg',
+     	'img/lightbox-3-image-17.jpg', 'img/lightbox-3-image-18.jpg',
+     	'img/lightbox-3-image-19.jpg', 'img/lightbox-3-image-20.jpg',
+     	'img/lightbox-3-image-21.jpg', 'img/lightbox-3-image-22.jpg',
+     	'img/lightbox-3-image-23.jpg', 'img/lightbox-3-image-24.jpg',
+     	'img/lightbox-3-image-25.jpg', 'img/lightbox-3-image-26.jpg',
+     	'img/lightbox-3-image-27.jpg', 'img/lightbox-3-image-28.jpg',
+     	'img/lightbox-3-image-29.jpg', 'img/lightbox-3-image-30.jpg',
+     	'img/lightbox-3-image-31.jpg', 'img/lightbox-3-image-32.jpg',
+     	'img/lightbox-3-image-33.jpg', 'img/lightbox-3-image-34.jpg',
+     	'img/lightbox-3-image-35.jpg', 'img/lightbox-3-image-36.jpg',
+     	'img/lightbox-3-image-37.jpg', 'img/lightbox-3-image-39.jpg',
+     	'img/lightbox-3-image-39.jpg', 'img/lightbox-3-image-40.jpg',
+     	'img/lightbox-3-image-41.jpg'],
+    4: ['img/lightbox-4-image-1.png', 'img/lightbox-4-image-2.png',
+    	'img/lightbox-4-image-3.png', 'img/lightbox-4-image-4.png'],
+    5: ['img/lightbox-5-image-1.gif', 'img/lightbox-5-image-2.gif',
+    	'img/lightbox-5-image-3.gif', 'img/lightbox-5-image-4.gif',
+    	'img/lightbox-5-image-5.gif', 'img/lightbox-5-image-6.gif',
+    	'img/lightbox-5-image-7.gif', 'img/lightbox-5-image-8.gif',
+    	'img/lightbox-5-image-9.gif'],
+    6: ['img/lightbox-6-image-1.jpg', 'img/lightbox-6-image-2.jpg',
+    	'img/lightbox-6-image-3.jpg', 'img/lightbox-6-image-4.jpg',
+    	'img/lightbox-6-image-5.jpg', 'img/lightbox-6-image-6.jpg',
+    	'img/lightbox-6-image-7.jpg', 'img/lightbox-6-image-8.jpg',
+    	'img/lightbox-6-image-9.jpg', 'img/lightbox-6-image-10.jpg']
+  };
+  images = lightboxImages[num];
+
+  // set the first image
+  currentImageIndex = 0;
+  maxImageIndex = images.length - 1;
+  currentLightbox.querySelector('img').src = images[currentImageIndex];
+
+  // show the lightbox
+  currentLightbox.style.display = 'block';
+
+  // listen for keyboard events
+  document.addEventListener('keydown', handleKeyboardInput);
+
+  // stop mousemove event
+  document.removeEventListener('mousemove', handleMousemove);
+
+  // add event listener for clicking on the right-hand side of the image
+  currentLightbox.querySelector('img').addEventListener('click', handleImageClick);
+
+  // add event listener for clicking outside the lightbox
+  currentLightbox.addEventListener('click', handleOutsideClick);
+}
+
+
+
+// hide lightbox
+function hideLightbox(num) {
+  // hide the lightbox
+  currentLightbox.style.display = 'none';
+
+  // remove keyboard event listener
+  document.removeEventListener('keydown', handleKeyboardInput);
+
+  // reset variables
+  currentLightbox = null;
+  currentImageIndex = 0;
+  maxImageIndex = 0;
+  images = [];
+
+  // start mousemove event
+  document.addEventListener('mousemove', handleMousemove);
+// remove event listener for clicking on the right-hand side of the image
+  currentLightbox.querySelector('img').removeEventListener('click', handleImageClick);
+}
+
+		// Handle keyboard input
+function handleKeyboardInput(event) {
+  if (event.keyCode === 37 && currentImageIndex > 0) {
+    // left arrow key
+    currentImageIndex--;
+    currentLightbox.querySelector('img').src = images[currentImageIndex];
+  } else if (event.keyCode === 39 && currentImageIndex < maxImageIndex) {
+    // right arrow key
+    currentImageIndex++;
+    currentLightbox.querySelector('img').src = images[currentImageIndex];
+  } else if (event.keyCode === 27) {
+    // escape key
+    hideLightbox(num);
+  } else if (currentImageIndex === 0 || currentImageIndex === maxImageIndex) {
+    // no more images in array, hide lightbox
+    hideLightbox(num);
+  }
+}
+
+
+		// Handle clicking on the right-hand side of the image to go to the next image
+function handleImageClick(event) {
+  const lightboxImage = currentLightbox.querySelector('img');
+  const lightboxWidth = currentLightbox.offsetWidth;
+  const cursorX = event.clientX - currentLightbox.getBoundingClientRect().left;
+
+  if (cursorX > lightboxWidth / 2) {
+    // click on the right-hand side of the image
+    handleRightClick();
+  } else {
+    // click on the left-hand side of the image
+    handleLeftClick();
+  }
+}
+
+// Handle clicking on the right-hand side of the image to go to the next image
+function handleRightClick() {
+  if (currentImageIndex < maxImageIndex) {
+    currentImageIndex++;
+    currentLightbox.querySelector('img').src = images[currentImageIndex];
+  } else {
+    // no more images in array, hide lightbox
+    hideLightbox();
+  }
+}
+
+// Handle clicking on the left-hand side of the image to go to the previous image
+function handleLeftClick() {
+  if (currentImageIndex > 0) {
+    currentImageIndex--;
+    currentLightbox.querySelector('img').src = images[currentImageIndex];
+  } else {
+    // no more images in array, hide lightbox
+    hideLightbox();
+  }
+}
+
+
+function handleMousemove(event) {
+  if (!currentLightbox) {
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const cursorX = event.clientX;
+    const cursorY = event.clientY;
+
+    const areaWidth = area.offsetWidth;
+    const areaHeight = area.offsetHeight;
+
+    const mapX = (cursorX / viewportWidth) * areaWidth - (areaWidth / 4);
+    const mapY = (cursorY / viewportHeight) * areaHeight - (areaHeight / 4);
+
+    const translateX = mapX * -1;
+    const translateY = mapY * -1;
+
+    area.style.transform = `translate(${translateX}px, ${translateY}px)`;
+
+  } else {
+    const lightboxImage = currentLightbox.querySelector('img');
+    const lightboxWidth = currentLightbox.offsetWidth;
+    const cursorX = event.clientX - currentLightbox.getBoundingClientRect().left;
+
+    if (cursorX > lightboxWidth / 2) {
+      // click on the right-hand side of the image
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      lightboxImage.src = images[currentImageIndex];
+    } else {
+      // click on the left-hand side of the image
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+      lightboxImage.src = images[currentImageIndex];
+    }
+  }
+}
+
+//mobile
+	  if (window.matchMedia("(max-width: 480px)").matches) {
+	    document.removeEventListener('mousemove', handleMousemove);
+	  }
+
+		document.addEventListener('mousemove', e => {
+			const viewportWidth = window.innerWidth;
+			const viewportHeight = window.innerHeight;
+			const cursorX = e.clientX;
+			const cursorY = e.clientY;
+
+			const areaWidth = area.offsetWidth;
+			const areaHeight = area.offsetHeight;
+
+			const mapX = (cursorX / viewportWidth) * areaWidth - (areaWidth / 4);
+			const mapY = (cursorY / viewportHeight) * areaHeight - (areaHeight / 4);
+
+			const translateX = mapX * -1;
+			const translateY = mapY * -1;
+ 
+
+			area.style.transform = `translate(${translateX}px, ${translateY}px)`;
+		});
+	</script>
+</body>
+</html>
