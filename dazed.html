@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="img/fav2.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica, sans-serif;
+      font-size: 11pt;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover, #emailCell:hover{
+      color: hotpink;
+    }
+
+    th, td {
+      text-align: left;
+    }
+
+    td {
+      padding-left: 25px;
+    }
+
+    main {
+      display: flex;
+      width: 100vw;
+      height: 100vh; 
+    }
+
+    .content {
+      transition: all 0.3s ease;
+      display: flex;
+      padding: 10px;
+      flex-direction: column;
+      align-items: flex-start; 
+      justify-content: flex-start;
+      flex: 1; 
+      overflow: auto;
+    }
+
+    .content.en {
+      background-color: #ffffff;
+      flex: 3; 
+    }
+
+    .content.kr {
+      background-color: #ffffff;
+      flex: 1;
+      opacity: 0.5;
+    }
+
+    button {
+      margin: 5px;
+      padding: 5px 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 50px;
+      align-items: center;
+    }
+
+    .grid-item.expanded {
+      grid-column: 1 / -1; 
+    }
+
+    .grid-item p {
+      margin-top: -5px;
+      font-size: 11pt;
+      width: 80%;
+      max-width: 1500px;
+      margin-bottom: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: justify;
+    }
+
+    .grid-image, .grid-video {
+      width: 60%;
+    }
+
+    .header{
+      width: 65%;
+      margin-top: 20vh;
+      margin-bottom: 50px;
+    }
+
+    #sarah{
+      font-size: 14pt;
+      font-weight: bold;
+    }
+
+    h2 {
+      margin: 0 0 5px 0;
+      font-size: 20pt;
+      text-align: center;
+      text-transform: uppercase;
+      color: hotpink;
+    }
+
+    h3 {
+      margin: 0 0 15px 0;
+      font-size: 13pt;
+      font-weight: bold;
+      text-align: center;
+      color: hotpink;
+    }
+
+    h4 {
+      margin: 0 0 25px 0;
+      font-size: 11pt;
+      font-weight: normal;
+    }
+
+    .question {
+      font-weight: bold;
+      color: hotpink;
+      margin-top: 20px;
+    }
+
+  </style>
+  <title>₊˚⊹ 𐦍༘⋆₊ ⊹</title>
+  <link rel="icon" href="img/fav1.png" type="image/png">
+</head>
+<body>
+  <main>
+
+    
+    <div class="content en">
+      <button class="language-button" id="enButton">en</button>
+
+      <div class="header">
+      <p><span id="sarah">Sarah Yeonkyung Choi</span> is a designer and writer from Seoul, who receieved her BFA from Parsons Paris and currently works for &#10094;DAZED KOREA&#10095;.</p>
+      </div>
+
+      <table>
+        <tr>
+          <th>Website</th>
+          <td><a href="https://sarahjoy.fr">sarahjoy.fr</a></td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td id="emailCell">sarah@dazedkorea.com</td>
+        </tr>
+        <tr>
+          <th>Phone</th>
+          <td>+82 10-5122-7593</td>
+        </tr>
+      </table>
+
+      <div class="grid">
+          <div class="grid-item" id="sasha">
+          	<h2>♥ Sasha Gordon</h2>
+          	<h3>My body is the canvas painted with my thoughts, emotions, and experiences.</h3>
+          	<h4><strong>Text</strong> Sarah Yeonkyung Choi</h4>
+          	<p>On a New York Time Saturday morning, Sasha Gordon appeared on my Zoom screen with black rectangular-framed glasses and the biggest, most inviting smile. Although we were meeting for the first time, it felt like I was catching up with an old friend. The first thing she said to me was, “I’ve never been to Korea! What’s the weather like these days?”</p>
+          	<p>Sasha Gordon is a twenty-six-year-old painter from Sommers, New York, currently living and working in Brooklyn. A 2020 RISD graduate, she is now represented by Matthew Brown Gallery, where she paints her feelings out, pouring out onto canvas her experiences growing up as a larger-bodied Asian American woman. In 2022, I saw Sasha Gordon’s work for the first time at Jeffrey Deitch in New York. Her vibrant, hyper-realistic variations of herself in surreal, fever-dream-like compositions left me spellbound. Each detail, down to every individual strand of hair, felt palpable to the point that the hairs on my arm rose up.</p>
+          	<p class="question">I can imagine that presenting yourself as a subject is not easy. Did you initially have reservations or did you feel compelled to do so from the start?</p>
+          	<p>For a while, I didn’t know what I wanted to paint about. I was confused about what style I wanted and what stories I wanted to tell. At first, I was painting solely based off of technique, and then in college, I painted a bathhouse scene. It was very vulnerable because it was the first time that I painted myself nude. I thought it would be more nerve-wrecking, but I felt pretty nonchalant about it.</p>
+          	<p class="question">That’s a bold move. </p>
+          	<p>I was timid at first because not many people in my school were painting themselves naked, but I found it freeing. For me, my likeness serves as a vehicle to express a language that I can’t speak. I get asked all the time, ‘Is this you?’ or ‘Are these your doppelgangers?’ but I see them rather as characters in this world who aren’t complete representations of myself.</p>
+          	<p class="question">In a past interview, you mentioned that even as more and more people connect with your work, you struggle to see yourself as a role model. Is that still the case today?</p>
+          	<p>Yes, it’s really weird. I get recognized maybe once a week, and I find it funny because I’m a painter and not a huge actor or anything. It’s hard for me to take it seriously because even though it is a job, painting still feels like a hobby to me. Painting comes very naturally to me. When I’m painting, I’m on autopilot. I don’t think twice about colors, for instance.</p>
+          	<p class="question">What about composition? Do your scenes come to you all at once, like in a dream, or do they come together gradually, piece by piece?</p>
+          	<p>Sometimes it’s a complete vision or idea that comes to mind. For example, the idea struck me to paint a person made entirely from a sweater material, with her arms bound together. Other times, I have the scene in my head and do some visual research. I’ll look at movies for their compositions and lighting because I want my paintings to have a cinematic quality, as if they were stills taken from a movie. There’s not always a rule to them. Things just have to feel right.</p>
+          	<p class="question">You imagine yourself as a volcano, a cat, a marshmallow, Botticelli’s Venus. Do you think of yourself as a shapeshifter or is there one motif that you identify most with?</p>
+          	<p>Currently, I’m returning to painting flesh. That’s what I’m most attracted to, but my work always reflects what I’m going through and how I’m feeling. I’ve had moments of depersonalization, to go back to the role model thing. People develop parasocial relationships with me, and when I started to get recognized, I felt dehumanized because people saw me more as a figure than as a person. That’s when I painted those anthropomorphic, transformative variations of myself. But I didn’t realize how much I missed painting flesh, and I’m returning to painting naturalistic skin colors in a classical way, rather than neon colors.</p>
+          	<p class="question">Did you have a reason for painting neon skin before?</p>
+          	<p>Yes, at the time, I wanted to show emotion through more than just facial expressions. I wanted the figure to be read indirectly, slowly. For example, there would be a figure with an upset expression, but their skin color would be a calm, pale blue, so you could sense their mixed feelings. I love using color, but I’m currently enjoying going back to my roots, to classical artists like Caravaggio.</p>
+          	<p class="question">Was he your favorite artist growing up?</p>
+          	<p>I think everyone loves Caravaggio [laughs]. My favorite artists are usually contemporary. I love Lisa Yuskavage. I studied abroad in Rome, and being surrounded by so much historical classical art made me crave contemporary art. My colors got more and more neon, and my work, more contemporary-looking. Now that I’ve been doing such contemporary work, I have nostalgia for classicism.</p>
+          	<p class="question">You purposefully clothe your subjects in itchy materials because you want viewers to feel discomfort. What role does clothing play in your work?</p>
+          	<p>Growing up, I felt like a shapeshifter because I was always following trends. When Juicy Couture was popular, I bought 16 tracksuits!</p>
+          	<p class="question">Me too! [laughs] I bought 3.</p>
+          	<p>You too?! [laughs] I was always aware of my body, and I wanted to feel good, but it was a challenge to find clothes that I liked in my size. Because I felt so much discomfort with clothes, when I paint them, I realize how heavy the context is—the brand, the level of femininity or masculinity...I’ve been painting nude figures more and more because I think it shows them in their purest form. Clothing, or the lack thereof, is an expression of comfort and discomfort.</p>
+          	<p class="question">What kind of clothes do you identify with the most and why?</p>
+          	<p>I’m going to shoutout a brand called Tank Air. They’re from Thailand, but based in LA, and while their clothes are casual, they can be dressed up. I also love Gap, and when I splurge, I love a Jean Paul Gaultier mesh top, like the one you are wearing.</p>
+          	<p class="question">I heard! I wore my best Jean Paul Gaultier for you. Back In 2022, I saw your work in the group show ‘Wonder Woman’ at Jeffrey Deitch, curated by Kathy Huang, and exploring the experiences of 30 female Asian American artists. How did it feel to be a part of a show like that?</p>
+          	<p>It was great! I think it was the largest of its kind at that time. I’m friends with Kathy, and she worked very hard on the curation. I didn’t know that many Asian painters growing up, and for most group shows, I’m usually the only Asian artist, so it felt nice to feel free in a space where we are all some type of Asian American. Sometimes my work is directly about my background and identity, and in this context, I felt that I didn’t have to explain myself and that the work didn’t have to be solely about my identity. Recently, it’s been more about the experiences that I've had and how they affect me. </p>
+          	<p class="question">Looking ahead, what changes would you like to see in people’s perceptions towards Asian and Asian American culture?</p>
+          	<p>I always notice that people treat Asian women as disposable or don’t listening to them. I’ll see my mom be mistreated, and I’ve been mistreated by people. People feel like they can say anything to me, and I’d like to see that change.</p>
+          	<p class="question">You’ve done a lot of interviews, but this is your first one that is catered towards a non-English-speaking audience. Is there anything you would like to say to Dazed Korea’s readers? </p>
+          	<p>I’d love to visit Korea! I’m planning on going soon. I think I would make some important paintings after. I still feel very American, so I’d love to learn more. I’d love to go with my mom since she hasn’t been back since the 80s. My brother actually went for the first time recently, and he loved it. He said the food was great!</p>
+    	  </div>
+     </div>
+    </div>
+
+ <!-- korean -->
+    <div class="content kr">
+      <button class="language-button" id="krButton">kr</button>
+      
+      <div class="header">
+      <p><span id="sarah">최연경 (세라)</span> 파리 파슨스 졸업, 현 &#10094;데이즈드&#10095; 디자이너.</p>
+      </div>
+
+      <table>
+        <tr>
+          <th>사이트</th>
+          <td><a href="https://sarahjoy.fr">sarahjoy.fr</a></td>
+        </tr>
+        <tr>
+          <th>이메일</th>
+          <td id="emailCell">sarah@dazedkorea.com</td>
+        </tr>
+        <tr>
+          <th>전화번호</th>
+          <td>+82 10-5122-7593</td>
+        </tr>
+      </table>
+
+      <div class="grid">
+          <div class="grid-item">
+          	<h2>사샤 고든</h2>
+          	<h3>내 몸은 나의 감정, 경험, 정체성의 그릇이다.</h3>
+          	<h4><strong>Text</strong> 최연경 (세라)</h4>
+          	<p>어느 토요일 아침, 직사각형의 검은 안경을 쓰고 매력적인 미소를 띤 사샤 고든이 줌 화면에 나타났다. 처음 인사를 나눴지만 마치 오랜 친구와 마음을 터놓고 이야기하는 것 같았다.</p>
+          	<p>뉴욕에서 사샤 고든의 작품을 처음 봤을 때 밤을 지새워도 다 눈에 담지 못할 것만 같았다. 그는 열병을 앓는 듯한 자신의 모습을 생동감 있고 극사실적으로 그려냈다. 머리카락 하나하나 소름이 돋을 정도로 섬세한 작품이었다. 사샤 고든은 RISD(Rhode Island School of Design)를 졸업하고, 현재 브루클린을 기반으로 활동하고 있는 한국계 미국인 화가다. 폴란드계 미국인 아버지와 한국인 어머니 사이에서 태어난, 체격이 큰 아시아계 아메리칸으로서의 경험은 그의 작업을 구성하는 주된 바탕이다.</p>
+          	<p class="question">자신을 주제로 작업하는 건 어때요. 처음에는 좀 망설였나요. 아니면 자신이 해야만 한다고 느꼈나요.</p>
+          	<p>한동안은 무엇을 그리고 싶은지 몰랐어요. 어떤 스타일을 원하고, 어떤 이야기를 하고 싶은지 혼란스러웠죠. 처음에는 테크닉에만 의존해 그림을 그렸어요. 그러다 대학 시절 처음으로 목욕탕에서 내 자신을 누드로 그리게 됐어요. 긴장할 줄 알았는데 막상 해보니 무덤덤하더라고요. </p>
+          	<p class="question">대담한 시도였네요.</p>
+          	<p>학교에 나체 그림을 그리는 사람이 많지 않아서 처음에는 조심스러웠지만 곧 자유로움을 느꼈어요. 말로 할 수 없었던 것을 표현하는 느낌이었어요. ‘이게 사샤인가요?’, ‘도플갱어인가요?’라는 질문을 항상 받지만, 저는 이 세상 하나뿐인 캐릭터라 생각해요. 온전한 제 모습이 아니라요.</p>
+          	<p class="question">과거 인터뷰에서 점점 더 많은 사람이 당신 작품에 공감하지만 롤 모델이 되는 건 부담스럽다고 했어요. 여전히 그런가요.</p>
+          	<p>네, 정말 이상하죠. 일주일에 한 번 정도 길거리에서 저를 알아보는 사람을 만나는데, 저는 대단한 배우도 아니고 그냥 화가이기 때문에 좀 의아해요. 직업이긴 하지만 저는 여전히 그림이 취미 같아서 더 그런 듯해요. 제게 그림은 너무나 자연스럽고, 또 그림을 그릴 때는 마치 자동 조종 장치가 켜지는 느낌이에요. 예를 들어 색을 선택할 때 저는 절대 두 번 생각하지 않거든요.</p>
+          	<p class="question">구도는요. 한꺼번에 장면이 다 떠오르나요, 아니면 조각조각 서서히 맞춰지나요.</p>
+          	<p>때때로 제 머릿속에 떠오르는 비전이나 아이디어가 있죠. 예를 들어 스웨터 소재로 팔이 묶인 사람을 그려야겠다는 아이디어가 떠오르기도 해요. 또 가끔은 장면이 생각나요. 그러면 시각적 조사를 하는데, 구도와 조명이 어떤지 보려고 영화를 찾아봐요. 제 그림이 영화 스틸 컷에서 가져온 장면처럼 보이길 원하기 때문이에요. 그냥 느낌이 와요.</p>
+          	<p class="question">자신을 화산, 고양이, 마시멜로, 보티첼리의 비너스라고 상상하기도 했어요. 자신이 변신술사라고 생각하나요, 아니면 모티브가 있나요.</p>
+          	<p>지금은 다시 살집을 그리는 그림으로 돌아가고 있어요. 제가 가장 매력을 느끼는 분야이지만, 제 작업은 항상 제가 겪는 일과 감정을 반영해요. 사람들이 저를 롤 모델로 인식한다고 말한 것처럼 비인격화되는 순간이 있었어요. 사람들은 저와 허구 관계를 형성하고, 저를 알아보기 시작했을 때 저를 한 사람이 아닌 하나의 형상으로 보았기 때문에 어떤 면에서 비인간적 느낌을 받아요. 그래서 변형된 제 모습을 그렸죠. 그런데 살집을 그리는 것이 얼마나 그리웠는지 깨닫고 이제는 네온 컬러가 아닌 전형적인 자연스러운 피부색으로 그리는 작업으로 돌아가고 있어요.</p>
+          	<p class="question">네온 컬러로 피부를 칠한 이유는 뭐죠.</p>
+          	<p>표정 대신 색으로 감정을 표현하고 싶었어요. 인물이 간접적으로 천천히 읽히길 바랐죠. 예를 들어 화가 난 표정이지만 피부색은 차분하고 옅은 파란색으로 표현해 복합적 감정을 느끼게 하는 식이었죠. 저는 다채로운 컬러를 사용하는 것을 좋아하지만, 최근에는 카라바조 같은 고전 예술가나 나의 본질로 돌아가는 것을 즐기고 있습니다.</p>
+          	<p class="question">원래부터 카라바조를 좋아했나요.</p>
+          	<p>카라바조는 누구나 좋아하는 것 같아요.(웃음) 제가 가장 좋아하는 아티스트는 보통 현대미술가예요. 그중에서도 리사 유스카바지를 좋아해요. 로마에서 유학했는데 역사적인 클래식 예술 작품에 둘러싸여 있다 보니 현대미술에 대한 갈망이 커졌어요. 제 색감도 점점 더 네온 컬러로 바뀌고 작품도 현대적으로 보이게 되었죠. 이렇게 현대적인 작업을 많이 하다 보니 이젠 고전주의에 대한 향수가 생겼어요.</p>
+          	<p class="question">보는 사람이 불편을 느끼길 바라며 일부러 피사체에 까칠한 소재의 옷을 입혔잖아요. 옷에 관해선 어떤 생각을 가지고 있나요.</p>
+          	<p>어릴 때 저는 항상 트렌드를 따라야 한다는 강박이 있었기 때문에 계속 새로운 모습을 보이려고 한 것 같아요. 쥬시 꾸뛰르가 유행할 때는 트레이닝복을 열여섯 벌이나 샀어요!</p>
+          	<p class="question">저도요!(웃음) 저는 세 벌 샀어요.</p>
+          	<p>항상 제 몸매에 신경을 많이 썼고, 기분 좋게 입고 싶었지만 마음에 드는 제 사이즈의 옷을 찾기가 어려웠어요. 옷에 대한 불편함을 많이 느꼈기 때문에 그림을 그릴 때 브랜드, 여성성, 남성성 등 맥락이 얼마나 무거운지 깨달았죠. 누드야말로 가장 순수한 형태를 보여줄 수 있다고 생각해 점점 더 많이 그리고 있어요. 옷 혹은 옷의 부재는 편안함과 불편함의 표현이에요.</p>
+          	<p class="question">지금은 어떤 옷을 가장 좋아하나요.</p>
+          	<p>탱크 에어라는 브랜드를 꼽고 싶어요. 태국이 배경이면서 LA에 본사를 둔 브랜드로, 캐주얼한 옷인데 차려입어도 멋스러워요. 갭도 좋아하고, 과시하고 싶을 때는 장 폴 고티에 메시 톱을 꺼내 입어요. 지금 당신이 입은 것처럼. </p>
+          	<p class="question">사샤가 장 폴 고티에를 좋아한다는 정보를 입수했어요. 그래서 제가 가장 좋아하는 장 폴 고티에를 입었어요.(웃음) 2022년에 캐시 황이 기획한 아시안 아메리칸 여성 아티스트 30명에 이름을 올린 경험을 탐구한 제프리 디치의 그룹 쇼 <원더우먼>에서 사샤의 작품을 봤어요. 그런 쇼에 참여한 기분이 어땠나요.</p>
+          	<p>정말 좋았어요! 당시에는 가장 큰 규모였던 것 같아요. 저와 캐시는 친구인데 큐레이션을 위해 정말 열심히 일했어요. 저는 어릴 때 아시아계 화가가 그렇게 많다는 사실을 몰랐고, 대부분 그룹전에서 아시아계 화가는 보통 저뿐이었기 때문에 모두가 아시아계 미국인 화가인 공간에서 자유롭게 느낄 수 있어서 좋았어요. 제 작품은 제 배경과 정체성을 직접적으로 표현하기도 하는데, 이런 맥락에서 저 자신을 설명할 필요도 없고 작품이 제 정체성에만 국한될 필요도 없다고 느꼈어요. 최근에는 제 경험과 그 경험이 제게 어떤 영향을 미치는지에 대해 더 많이 생각하고 있어요.</p>
+          	<p class="question">마지막으로 <데이즈드> 독자에게 하고 싶은 말이 있나요.</p>
+          	<p>한국을 꼭 방문하고 싶어요! 곧 갈 계획이기도 하고요. 한국 여행 이후에 의미 있는 그림을 그릴 것 같다는 생각이 들어요. 저는 스스로 매우 미국적인 사람이라고 생각해 한국에 대해 더 많이 배우고 싶어요. 어머니도1980년대 이후 한국에 가보지 못하셨기 때문에 어머니와 함께 가면 더 좋을 것 같아요. 제 동생이 얼마 전 한국을 처음 방문했는데, 정말 좋아했어요. 특히 음식이 맛있다고 하더라고요!</p>
+          </div>
+
+    </div>
+  </main>
+
+  <script>
+    // language toggle
+    const enButton = document.getElementById('enButton');
+    const krButton = document.getElementById('krButton');
+    const enContent = document.querySelector('.content.en');
+    const krContent = document.querySelector('.content.kr');
+
+
+    enButton.addEventListener('click', () => {
+      enContent.style.flex = '3';
+      krContent.style.flex = '1';
+      enContent.style.opacity = '1';
+      krContent.style.opacity = '0.5';
+    });
+
+    krButton.addEventListener('click', () => {
+      enContent.style.flex = '1';
+      krContent.style.flex = '3';
+      enContent.style.opacity = '0.5';
+      krContent.style.opacity = '1';
+    });
+
+    // copy email address
+    const emailCell = document.getElementById('emailCell');
+    const email = emailCell.textContent;
+
+    emailCell.addEventListener('click', () => {
+      navigator.clipboard.writeText(email)
+        .then(() => {
+          alert('email copied !');
+        })
+        .catch(error => {
+          console.error('error copying email >:(', error);
+        });
+    });
+
+// grid --> span on click
+    const enGridItems = document.querySelectorAll('.content.en .grid-item');
+    const krGridItems = document.querySelectorAll('.content.kr .grid-item');
+
+    function toggleExpandedAndImages(gridItem, wafImages) {
+      gridItem.classList.toggle('expanded');
+      const wafImgs = wafImages.querySelectorAll('img');
+      wafImgs.forEach(img => {
+        img.style.display = gridItem.classList.contains('expanded') ? 'block' : 'none';
+      });
+    }
+
+    enGridItems.forEach(item => {
+      const wafItem = document.querySelector('.content.en .grid-item#waf');
+      const wafImages = wafItem.querySelector('.waf');
+      
+      item.addEventListener('click', () => {
+        if (item === wafItem) {
+          toggleExpandedAndImages(item, wafImages);
+        } else {
+          item.classList.toggle('expanded');
+        }
+      });
+    });
+
+    krGridItems.forEach(item => {
+      const wafItem = document.querySelector('.content.kr .grid-item#waf');
+      const wafImages = wafItem.querySelector('.waf');
+      
+      item.addEventListener('click', () => {
+        if (item === wafItem) {
+          toggleExpandedAndImages(item, wafImages);
+        } else {
+          item.classList.toggle('expanded');
+        }
+      });
+    });
+
+const textPath = document.querySelector("#text-path");
+
+const h = document.documentElement, 
+      b = document.body,
+      st = 'scrollTop',
+      sh = 'scrollHeight';
+
+document.addEventListener("scroll", e => {
+  let percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+  textPath.setAttribute("startOffset", (-percent * 40) + 1200)
+});
+  </script>
+</body>
+</html>
