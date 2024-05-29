@@ -143,12 +143,13 @@
     }
 
     @media screen and (max-width: 480px) {
-      .content.en {flex: 4;}
-      .content.kr {flex: 1;}
+      .content.en {flex: 4; overflow: hidden;}
+      .content.kr {flex: 1; overflow: hidden;}
       h2, #sarah {font-size: 12pt;}
       h3, body {font-size: 9pt;}
       h4,.grid-item p{font-size: 9pt;}
       button {position: absolute; color: hotpink;}
+      body{-webkit-overflow-scrolling: touch;}
     }
 
   </style>
