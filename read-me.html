@@ -351,7 +351,7 @@
         }
       });
     });
-
+    
 const textPath = document.querySelector("#text-path");
 
 const h = document.documentElement, 
@@ -363,6 +363,22 @@ document.addEventListener("scroll", e => {
   let percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
   textPath.setAttribute("startOffset", (-percent * 40) + 1200)
 });
+
+// disable emojois
+        function replaceEmojis() {
+            const emojiRegex = /[\uFE0F]/g; // Unicode variation selector for emojis
+            const elements = document.body.getElementsByTagName("*");
+
+            for (let element of elements) {
+                if (element.children.length === 0) { // Ensure we are replacing text content only
+                    element.innerHTML = element.innerHTML.replace(emojiRegex, '');
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            replaceEmojis();
+        });
   </script>
 </body>
 </html>
