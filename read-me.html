@@ -278,19 +278,30 @@
     const krContent = document.querySelector('.content.kr');
 
 
-    enButton.addEventListener('click', () => {
+  enButton.addEventListener('click', () => {
+    if (window.matchMedia("(max-width: 480px)").matches) {
+      enContent.style.flex = '4';
+      krContent.style.flex = '1';
+    } else {
       enContent.style.flex = '3';
       krContent.style.flex = '1';
-      enContent.style.opacity = '1';
-      krContent.style.opacity = '0.5';
-    });
+    }
+    enContent.style.opacity = '1';
+    krContent.style.opacity = '0.5';
+  });
 
-    krButton.addEventListener('click', () => {
+  krButton.addEventListener('click', () => {
+    if (window.matchMedia("(max-width: 480px)").matches) {
+      enContent.style.flex = '1';
+      krContent.style.flex = '4';
+    } else {
       enContent.style.flex = '1';
       krContent.style.flex = '3';
-      enContent.style.opacity = '0.5';
-      krContent.style.opacity = '1';
-    });
+    }
+    enContent.style.opacity = '0.5';
+    krContent.style.opacity = '1';
+  });
+
 
     // copy email address
     const emailCell = document.getElementById('emailCell');
