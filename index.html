@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/fav1.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica, sans-serif;
+      font-size: 11pt;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover, #emailCell:hover, #anchor{
+      color: hotpink;
+    }
+
+    th, td {
+      text-align: left;
+    }
+
+    td {
+      padding-left: 25px;
+    }
+
+    #anchor th {
+      padding-right: 10px;
+    }
+
+    main {
+      display: flex;
+      width: 100vw;
+      height: 100vh; 
+    }
+
+    .content {
+      transition: all 0.3s ease;
+      display: flex;
+      padding: 10px;
+      flex-direction: column;
+      align-items: flex-start; 
+      justify-content: flex-start;
+      flex: 1; 
+      overflow: auto;
+    }
+
+    .content.en {
+      background-color: #ffffff;
+      flex: 3; 
+    }
+
+    .content.kr {
+      background-color: #ffffff;
+      flex: 1;
+      opacity: 0.5;
+    }
+
+    button {
+      margin: 5px;
+      padding: 5px 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 50px;
+      align-items: center;
+    }
+
+    .grid-item.expanded {
+      grid-column: 1 / -1; 
+    }
+
+    .grid-item p {
+      margin-top: -5px;
+      font-size: 11pt;
+      width: 80%;
+      max-width: 1500px;
+      margin-bottom: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: justify;
+    }
+
+    .grid-image, .grid-video {
+      width: 60%;
+    }
+
+    .header{
+      width: 65%;
+      margin-top: 20vh;
+      margin-bottom: 50px;
+    }
+
+    #sarah{
+      font-size: 14pt;
+      font-weight: bold;
+    }
+
+    h2 {
+      margin: 0 0 5px 0;
+      font-size: 20pt;
+      text-align: center;
+      text-transform: uppercase;
+      color: hotpink;
+    }
+
+    h3 {
+      margin: 0 0 15px 0;
+      font-size: 13pt;
+      font-weight: bold;
+      text-align: center;
+      color: hotpink;
+    }
+
+    h4 {
+      margin: 0 0 25px 0;
+      font-size: 11pt;
+      font-weight: normal;
+    }
+
+    .question {
+      font-weight: bold;
+      color: hotpink;
+      margin-top: 20px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    @media screen and (max-width: 480px) {
+      .content.en {flex: 4; overflow-x: hidden;}
+      .content.kr {flex: 1; overflow-x: hidden;}
+      h2, #sarah {font-size: 12pt;}
+      h3, body {font-size: 9pt;}
+      h4,.grid-item p{font-size: 9pt;}
+      button {position: absolute; color: hotpink;}
+      body{-webkit-overflow-scrolling: touch;}
+    }
+
+  </style>
+  <title>₊˚⊹ 𐦍༘⋆₊ ⊹</title>
+</head>
+<body>
+  <main>
+
+    
+    <div class="content en">
+      <button class="language-button" id="enButton">en</button>
+
+      <div class="header">
+      <p><span id="sarah">Sarah Yeonkyung Choi</span> is a designer and writer from Seoul, who received her BFA from Parsons Paris and currently works for &#10094;DAZED&#10095; KOREA.</p>
+      <table>
+        <tr id="anchor">
+          <th><a href="#lara">♡ Lara Violetta</a></th>
+          <th><a href="#sabu">♡ Sabukaru</a></th>
+          <th><a href="#sophia">♡ Sophia Álvarez</a></th>
+          <th><a href="#sasha">♡ Sasha Gordon</a></th>
+        </tr>
+      </table>
+      </div>
+
+      <table>
+        <tr>
+          <th>Website</th>
+          <td><a href="https://sarahjoy.fr">sarahjoy.fr</a></td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td id="emailCell">sarah@dazedkorea.com</td>
+        </tr>
+      </table>
+
+      <div class="grid">
+
+        <div class="grid-item" id="lara">
+            <h2>♡ Lara Violetta ♡</h2>
+            <h3>Two magazine-loving girls talk about Lara Violetta’s new magazine for the magazine Sarah works for.</h3>
+            <h4><strong>Text</strong> Sarah Yeonkyung Choi</h4>
+            <p>No one loves magazines as much as Lara Violetta. The smell of printed paper is her entire childhood (her father worked as an art director at a fashion publication). She studied the women in the pages, dreaming of stepping into their high heels, which she wore to school. Her heart beat to the click-clack of heels.</p>
+            <p>Lara Violetta is a German all-around creative living in Paris. She came to Paris as a freelance graphic designer four years ago, started posting Youtube videos during the lockdown, and launched her magazine, Violet Papers a month ago. In the first issue, ‘What’s Inside,’ you’ll find Lara crouching on the cool grey Parisian sidewalk with gigantic D’heygere earrings, a makeup brush in her mouth, a Dior eyeshadow palette in hand, and her silver Balenciaga motorcycle bag on the floor. Wherever she goes, she’s carrying a magazine.</p>
+            <p class="question">Many of your photos are set against the streets of Paris. I can really feel your love for the city.</p>
+            <p>The city always inspires me a lot. What I love about the city is that you can be so sucked in in your own world, and then, you realize no one cares about you. It’s always moving, it's so fast, it's so loud, and it demands so much from you. But sometimes you can find quietness within this mess, and it’s in these moments that I like to take pictures.</p>
+            <p class="question">I heard you became a content creator on accident.</p>
+            <p>I was always interested in taking pictures, and I always loved everything about creating content, but I never intentionally thought I would start as an influencer. I had so much fun with my first YouTube video, so I continued doing it. After a while, I realized that I should also probably post on Instagram and half-a-year later, it took off.</p>
+            <p class="question">Do you identify as content creator, editor-in-chief, graphic designer, or all of the above?</p>
+            <p>All of them. I think being put into a box is quite outdated. I'm really happy to do what I love and it being in so many different variations.</p>
+            <p class="question">Brands now refer to content creators as talents. Could you describe brands’ changing attitudes and approaches towards content creators?</p>
+            <p>What’s important for the brands is to find the right match for them. I see brands creating a long-lasting relationship with their talents, and I feel that this is the most authentic growth for both. It has changed. Now brands appreciate it when talents have their pursuits apart from content creation. If you have a brand relationship based on trust and you feel that they also want to support you and what you do, that's when it works the best.</p>
+            <p class="question">The first issue of Violet Papers tackling how digital formats would transition into print. How do you perceive the roles of print and digital in today's media landscape?</p>
+            <p>I think print will never really go away. What I've discovered through the magazine is how many young creatives hold onto and believe in it, which was surprising because it was definitely a risk for me. I wasn't sure. It made me so happy. Everyone has an emotional attachment to print. I got so many messages, saying, ‘Yeah, I always used collage’. I think print is the starting point of getting into the creative, and it's nice to be able to have this longevity of content in print. It will never go away.</p>
+            <p class="question">Could you tell us more about the process behind the first issue?</p>
+            <p>Starting a magazine from scratch was difficult because you have to earn the trust of the contributors, and we started with nothing. It was just a PDF with my thoughts. When we reached out to the first people, it was quite humbling because people were confused, especially with the concept of flipping digital formats to print and with a new form of advertisement that included fashion podcasts and vintage stores. The most difficult part was to get the first contributor on board because it’s from there that you go to the next one. It’s like fishing: you need one fish to catch another fish.</p>
+            <p class="question">Speaking of advertisements, Laura & Deana Fanning usually never does print advertisements, but they made an exception for you.</p>
+            <p>Yeah, I still can't believe they did this because I admire their work so much. I was really touched by it. They also fit it to the theme of the issue; the issue was all about ‘What's Inside’, and they took time to do this ad that showed the process of making the shoe. I felt so lucky.</p>
+            <p class="question">Is that one of the brands you work most closely with?</p>
+            <p>Yes, they believed in me from the beginning. I was quite small when they found me, and they are always so nice after the shows. The talents get to see the mood boards and the behind-the-scenes, and I really admire their work because it's so complex. I think it's intelligent the way they play with fabrics and everything cuts. They’re definitely one of my favorite brands, and as I said in the beginning, this is the most amazing relationship you can have with a brand.</p>
+            <p class="question">The first issue launched with ‘The Paper bag’, a double-fringed strap bag designed to carry magazines.</p>
+            <p>Necessity is the mother of invention. ‘The Paper bag’ was something I needed since I love to carry around my magazines, and publications got bigger and bigger as magazines produce less publications a year. Whenever I would have an appointment, I wouldn’t want to always take the biggest bag that I have, but the magazine would not fit otherwise. It was really important for me to have something that would be variable to different sizes of publications because my whole philosophy is re-wearing pieces as much as possible. Also, there’s this whole stigma around influencers just taking pictures with magazines without actually reading it, so it was such a funny idea to, as an influencer, create both a magazine and an accessory for the magazine that allows you to wear the magazine as an accessory (laughs).</p>
+            <p class="question">Were you part of the whole design process from start to finish?</p>
+            <p>Yes, my boyfriend studied in Antwerp, and he's an amazing designer. We initially had two different versions of it, and we went through the whole process until it became what it is today.</p>
+            <p class="question">How do you stay inspired in a world of over-saturation?</p>
+            <p>It's always been magazines for the most part. TikTok too, of course, but inspiration can be everywhere, and it's important to leave your bubble sometimes. TikTok can be a bubble, but with magazines, you can find so many amazing things that are not picked out for you by the algorithm. But I also love Pinterest and Tumblr. I will forever be a Tumblr girl.</p>
+            <p class="question">Your approach to makeup is minimalist yet experimental. Do you get inspiration from something that you see or do you do your makeup as you feel like the morning of?</p>
+            <p>A mix of both! I try not to be in my head too much. If I have a picture in my mind or an idea, and I'm too stuck on it, it doesn't work out. It’s important to try and to fail. I try and fail a lot, and that's what people don't see, but I always explore what I'm into at the moment, especially with colors. It takes time. I was actually in Seoul last September, and I miss Olive Young so much!</p>
+            <p class="question">What were your first impressions of Seoul?</p>
+            <p>I loved the energy, and I loved everyone’s looks! Everyone was very open.</p>
+        </div>
+
+        <div class="grid-item" id="sabu">
+            <h2>♡ Sabukaru ♡</h2>
+            <h3>Connecting worlds.</h3>
+            <h4><strong>Text</strong> Sarah Yeonkyung Choi</h4>
+            <p>My friend Andy was featured in a Sabukaru post. Her ex-boyfriend blew up her phone the next day, screaming, “I hate you, I can’t believe you’re featured in my favorite magazine.” Sabukaru is an independent online magazine based in Tokyo, connecting (sub)cultures for the past five years. Adrian Bianco, known by everyone as Bianco, is editor-in-chief of Sabukaru, creative strategist of Gata (run by Marta Espinosa), and founder of creative company Bianco Bianco. From a small town in Germany, his love for anime—particularly Dragon Ball—hardcore online games, and ramen led him to relocate to Tokyo. Sabukaru's pop-up at 8division in May saw the worlds of Dazed Korea and Sabukaru collide. In Helmut Lang SS1999 prisoner pants, Rick Owens high-top Ramones sneakers, and sunglasses, he kept thanking us for our time and interest, when the roles should have been reversed.</p>
+            <p class="question">Do you think your outsider perspective on Japanese culture allows you to adopt a unique approach that resonates with others?</p>
+            <p>It definitely helped the magazine grow. Japanese people often tell us that they love what we're doing. They never saw certain topics as interesting, or they never gave a second glance to certain aspects of the everyday. The curiosity is different when you’re on the outside. I'm from Germany, and I would only need thirty seconds to tell you what I like about the country. Somebody else that visits Germany will certainly have a lot more to tell you.</p>
+            <p class="question">I get it! I spent the past six months in Hamburg for an internship and while I was enamored, my colleagues took my comments with amusement. I understand that your team consists of a global network of friends and even reader-turned editors. Could you share with us more about your team?</p>
+            <p>I always say I don't have much talent, but the only talent I have is finding talented people and bringing them together. I used to have a blog before the magazine, and I had a few die-hard—[laughs] good—readers who became the crutch of Sabukaru. Then it slowly snowballed into this international community. Currently, the majority of our magazine is female-led. People often get the wrong idea because we post hot, sexy, revealing content sometimes, and it’s easy to dismiss an attractive woman as a product of the male gaze when in reality, it’s driven by female agency. We have strong female writers, like Mizuki for example. She was one of our leading writers, but she now focuses on art under the name Exit Number Five (@exitnumberfive). Sabukaru organically changes and always reflects the people behind the operation.</p>
+            <p class="question">Your team works on both Sabukaru and Gata. How do you decide which content is for Gata and which is for Sabukaru, and is there any overlap?</p>
+            <p>We always describe Gata as the edgy sister or girlfriend. You can spot a Gata writer on first sight. I think the same goes for Sabukaru, but it’s more evident with Gata. Topics arise organically for both. Some writers contribute to both, while some write just on Gata or just on Sabukaru. Everybody just does what they do, and it somehow naturally works in parallel quite well.</p>
+            <p class="question">How would you describe the Sabukaru Girl? What's her morning routine? What brands does she look for when shopping?</p>
+            <p>She’s Miu Miu without the logo, Kiko Kostadinov Asics ballerina shoes, tights, and a skirt. She references popular fashion, but she’s more design-led than brand-led and shys away from signifiers. I think about Ora and Yasmina from our team. Ora needs to have a coffee in the morning, otherwise the engine doesn’t start working. They're not afraid of sitting alone in a kissaten (喫茶店, a small coffee shop) for three hours reading an obscure book and detaching themselves completely from the outside world. They’ll end up at one of the coolest parties at night, say hello, stay one or two hours, and not overdo it. When they enter the room, they’re like a knife through warm butter: warm and welcoming. They’re not arrogant; there's no high ground. They talk to people, they're very open and very interested to explore whatever and whoever is in front of them.</p>
+            <p class="question">Her current goals and priorities?</p>
+            <p>To do what you love. This is a generation, and I think Sabukaru is a good example, searching for fulfilling careers instead of traditional ones. To spend time with what makes you interested in the world. Did you see the meme last week about people who read magazines versus people who write magazines?</p>
+            <p class="question">Yes, I shared that with my team!(laughs)</p>
+            <p>It's a bit of self-suffering to work at a magazine, right? You could also have an easier life, but you do it for yourself.</p>
+            <p class="question">How do you keep these passion projects passionate?</p>
+            <p>I used to work a long time at Vice, and I saw the growth of Highsnobiety because I was based in Berlin. I learned a lot from both magazines. I believe if a magazine's goal is linked to revenue, you have a problem when it comes to content. We at Sabukaru always write about what we like. That's why there's never a creativity block. We rather need to be patient and not get stressed by having not enough time. I always compare Sabukaru to a pirate crew since our agency Bianco Bianco funds the magazine and allows Sabukaru to remain independent. We work like maniacs, but I appreciate having two different energies in the office.</p>
+            <p class="question">As subcultures gain momentum, especially with niche aesthetics experiencing rapid turnover on TikTok, does the increasing popularity of Sabukaru concern you in any way?</p>
+            <p>Subcultures are easy viral content on TikTok and on Instagram, with photo slideshows gaining millions of views. We're not doing that. We're always digging deeper and writing a long text. We will not let the algorithm translate us into fast content. Subcultures gaining popularity helped us to define ourselves even more. I don’t believe that it will die out. Fast content inevitably creates curious people who want to dig deeper.</p>
+            <p class="question">You’ve reached a global audience and you've recently expanded your work to China and Korea. Do you see the emergence of a Pan-Asian identity?</p>
+            <p>100%, I do believe that...Our team has been in Japan five years now, and recently, I zoomed out and realized that I’m not living in Japan, I’m living in Asia. I see there's something boiling in Southeast Asia—in Indonesia and Thailand, for example. I would love to report on these growing scenes. We’re slowly tapping into Korea too, and the next year will represent our hunger to expand.</p>
+            <p class="question">A friend of mine who spent a lot of time in Thailand told me you know The Future is Ladyboy too.</p>
+            <p>Nalin is the best. We have an interview with her coming soon. Bangkok and Thailand in general are really on the rise right now.</p>
+            <p class="question">You work with a lot of emerging brands.</p>
+            <p>We run a showroom in Paris, and we bring almost only emerging talent. At one point a young brand has to start, and at one point a young brand needs support. It’s crucial to support emerging talent, to inspire a new generation to kick things off. Today, I'm wearing Luca Hamers. It feels more personal to wear young designers, especially persona-designed brands, and I think this excitement carries on to our readers. I hope Sabukaru will stay a platform that is mainly focused on emerging designers.</p>
+            <p class="question">Luca Hamers is one of the brands showing at 8division. Could you tell us more about the three brands that you’re bringing?</p>
+            <p><strong>Luca Hamers</strong> is a Dutch designer living in London. He studied at Central Saint Martins, and we featured his thesis collection on Sabukaru. It’s dark functional fashion, like if ACRONYM and Rick Owens had a kid.</p>
+            <p><strong>ALIVE FORM</strong> is a 3D sneaker brand by Tokyo-based Singaporean designer, Ping. Over the last three years, I met a lot of 3D print brands, and most of them were on the entrepreneur side, who thought of 3D printed clothing as a scalable business. Ping, however, is first and foremost an aesthetic designer, and his way of expression just happens to be 3D printing.</p>
+            <p><strong>THE SUGAR PUNCH</strong> is an anime merchandise brand by graphic designer and manga head SUGAR. He’s a mad man who worked in fashion for fifteen years, behind-the-scenes on many big brands. It’s expensive, but the moment you feel it in your hands, you understand that it’s high-end. It’s Visvim quality with anime prints.</p>
+            <p class="question">I love your analogies.</p>
+            <p>That’s my second talent.</p>
+            <p class="question">Last but not least, how do you curate Sabukaru’s Instagram feed?</p>
+            <p>From the 3 000 Sabukaru posts, I scheduled 99.9% of them. Before we had a scheduling tool, Marta and I uploaded every post by hand. It's a symphony to me. I hear something when I look at the Sabukaru content, and if I have a D, then I know to add an A. I like how unexpected some of the content can be. I believe that losing followers is good. Often, people don't understand or like our posts. People should treat their Instagram accounts like a soup. If you cook a soup and you reduce it, the soup gets better, you know? Community is not always about growth.</p>
+        </div>
+
+        <div class="grid-item" id="sophia">
+            <h2>♡ Sophia Álvarez ♡</h2>
+            <h3>Connecting worlds.</h3>
+            <h4><strong>Text</strong> Sarah Yeonkyung Choi</h4>
+            <p>Sophia Álvarez is a young artist working between LA, New York, and Paris, Paris being her preference. You might have seen her grace the ERD runway or your favorite fashion magazine, but you’ve most definitely seen her on the internet. Sophia is the epitome of effortless, iconic cool.</p>
+            <p>With chunky, layered necklaces cascading down her neck and her hair disheveled into a perfect mess, Sophia hopped on a Zoom call straight out of her uber from LAX. After our interview, one of my colleagues came up to me and asked what Sophia was like in person. “I think she’s the coolest girl that I’ve seen these days.” There’s just something about her. A je-ne-sais-quoi.</p>
+            <p class="question">How did you come to model for ERD?</p>
+            <p>It was unplanned, and it happened really fast. I personally think that the best things are. My friend, David, who I have been working together for a very long time, became affiliated with the brand through Henri and then contacted me. I was living in New York at the time, and it was a complete accident that I was even in town. We did one shoot together, and when a working relationship is really good, it’s instant chemistry and the rest can't be explained. It just works.</p>
+            <p class="question">How did it feel to close their Autumn/Winter 24 collection?</p>
+            <p>Oh, lovely. It was so cold in Paris, and the dress was metal. I was backstage with a hair dryer on the metal, trying to keep it warm. It felt lovely. It was physically heavy. It was probably about 50 pounds or so. I could be wrong, but I want to say that it was 10,000 separate pieces of metal stuck together, reformed. I felt absolutely honored. It was a lot of in and out of the studio, fine-tuning everything and always asking each other’s opinions. It’s a small team and everyone trusts each other there. They've always been so kind and supportive of everything that I do, including work outside of them. I really enjoyed the movement into the couture side for the brand. I think it's doing really well. I'm just happy to be a part of it.</p>
+            <p class="question">My dream dress, honestly. If you were invited to the MET Gala, is there a dream dress that you have picked out in your mind or a designer you know you would like to work with?</p>
+            <p>I feel like I’ve thought about a MET Gala dress more than a wedding dress. Of course, I would want to make something custom with ERD—home brand mentality (laughs). Otherwise, the current direction of Margiela is so next-level with its full-on story-building, which is what I'm appreciating the most out of brands right now. It’s like the run-on sentence that isn’t necessary, but takes the full narrative to the end. I’d love to see a Shayne Oliver look at the Met Gala, depending on the theme of course.</p>
+            <p class="question">How does the creative scene in Paris differ from that of New York or LA?</p>
+            <p>LA is having a bit of a revival right now. New York has become more commercial despite my younger designer friends being outrageously talented. I started working in LA in the pandemic era, and then moved to New York, but once Enfants Riches Déprimés became a part of my life, I started going to Paris. I think the city hits more of the marks of what I'm interested in aesthetically. I think there is more of a platform in Paris. People are interested in younger designers and artists in general. There’s a great mix between this generation and traditional practice right now. I don't think it happens very often in cities. The art and craft of fashion is still highly respected, slower and more intentional. I find more open dialogue— what defines someone's art when it doesn't easily fall into one lane. You can be multidisciplinary—have your hand in a few different areas and still be consistently a part of the conversation.</p>
+            <p class="question">Are geographical boundaries becoming less relevant in today's world, thanks to the internet?</p>
+            <p>I think that there's extreme virtue to being based in one place. I grew up moving around a lot, like 50 places in the other states from random, middle-of-nowhere Texas to Florida. A lot of people have asked me why I move around so much, but I just love collecting information. I feel extremely lucky to be able to travel as much as I do, and my favorite part is acting as a sponge, letting it resonate, and seeing what comes out the other side. I think a lot of people, because of the internet, feel pressure to go to every fashion week, to participate in the Social Olympics, but I don’t subscribe to that. No, you don't need to be based anywhere. However, you do need to be based in the place that allows you to say what you want to say.</p>
+            <p class="question">How do you stay still and still feel like you’re moving forward?</p>
+            <p>It’s funny you mentioned that. I would say that’s the hardest obstacle right now. If you grow up nomadic, you over-exercise certain muscles and let others atrophy. You strive to survive and die to adapt. I’m trying to learn how to be still. Sometimes it takes years for certain things to reach understanding. Sometimes they're perfect for the moment. But you just have to find what that means for yourself and follow that. There is nothing more important than finding honesty in your work and being satisfied with yourself. If that means being in Paris every two months, if it means Milan, then cool. Some of my favorite artists live in one city and never leave. Their work is fabulous, and I almost envy them. Oh my god, you're so comfortable just being here, and I think that is so beautiful. I wish I could be like that sometimes.</p>
+            <p class="question">Are there any artists in particular that influence your work the most?</p>
+            <p>I have some friends here in LA, like Julien Nguyen. He’s a painter and he’s worked with Loewe and JW Anderson. He stays in LA and paints in his house every single day. That's what he does, that’s his craft. Donna Trope is a photographer who is a mentor of mine. I just spent a month with her, and she taught me so much. She's lovely and to work with, she's crazy genius, and she's been very influential in terms of teaching me artistic integrity and intention. My sister showed me the first fashion show that I ever saw, Jean Paul Gaultier, and it just changed everything. It was a season with Omahyra Mota, and she was the coolest person that I'd ever seen. The other direct influence is dance. I have a very heavy ballet influence, which is where I even learned to touch garments, trying to make my own costumes because it's a very expensive art-sport. It's something that I still just enjoy so much. We just did that gallery installation video at ERD, and being in shoes again was something that I haven’t done in a long time.</p>
+            <p class="question">Tell me more about the performance video.</p>
+            <p>I had these shoes. They were from my last performance ever. When I got injured, I was finishing up a series of shows, either La Bayadère or Cinderella. I feel like I’ve blocked that out. I didn’t want to buy another pair, so I wore this pair to death, to the point where the box cut into my foot while I was dancing and there was blood all over the shoe. When I was going through my old stuff, I found them and gave them to Henri to look at. We had been talking about the dance element. I didn’t want to actually dance because I thought it would make it too aesthetically pleasing. There’s a difference between something that I think can resonate with other people and something that is just eye candy. That was one take, 15 minutes. We filmed on a low resolution, home-video-type camera, and I cried during it. It was nice to be able to bring that performance aspect beyond the runway, but also have it be personal and a translation of how I now feel about dance.</p>
+            <p class="question">I used to dance too, and I was a bit sad when ballet core became a thing, because when you’re a little girl and you see those big girls with their perfect toes, they’re your epitome of beauty.</p>
+            <p>The fetishization of it or it just being this online aesthetic is so distant from my relationship with dance. Dance is very brutal for me. It’s beautiful in the way it is exhausting. It’s putting yourself through your own personal obstacle course every two seconds, but out of that breeds so much discovery.</p>
+            <p class="question">Fatigue is a common theme I see in your work. Girls sprawled across the floor, slumped in a chair, resting their heads on each other in the cab…</p>
+            <p>One of my friends said that a really great image, or a great piece, should cut into time. It should be the in-between, and it should be completely separate from past or present. I’ve always been drawn to imagery that makes you ask more questions than it answers, and also forces you to stop a little bit. Because I do move around so much, when I do have the opportunity to build something in front of me, I want it to feel slower. I also work pretty slow (laughs).</p>
+            <p class="question">Your work spans modeling, styling, creative direction, performance, and fashion design. Is there a medium that you are most attracted to and why?</p>
+            <p>I try not to adhere to a specific genre. I have a list of things that I just want to do in life, and they all kind of fall under...the world that I do want to build. There’s so many different things I would love to try. I would love to perform more. I was super uncomfortable being in front of the camera at first, after I had to quit dance. Then I started with sculpture and somehow got thrown into fashion. I don’t really adopt the term stylist, though. I really don’t like it. I’ll use, like, anything to make, like, a look.</p>
+            <p class="question">So if you would reject the term stylist, is there another word that you would coin?</p>
+            <p>I don’t reject it, but for the most part, I don’t even really use clothing, or when I do, when I work with certain brands, I’m usually taking a piece and completely turning it into something else. I have features, in  Numero for example, where there’s not really clothing for the most part. The dresses were made of Honda and Rolls Royce racing flags. I prefer a shoot where I could use one piece of fabric over and over again and make it look new.</p>
+            <p class="question">How would you describe your personal style?</p>
+            <p>It’s a direct reflection of everything that I’m interested in at the time. I love the jewelry side. I was raised Catholic, so religion has a heavy influence on my style. My style in general is picking up pieces from different places I’ve lived, recontextualizing them, and making them my own.</p>
+            <p class="question">Could you tell us more about the shoot that you directed for Dazed Korea’s July issue?</p>
+            <p>It’s an ongoing project that Cameron and I have worked on for the past year. We pause whenever our time and worlds overlap to test ideas. Ranging from Paris to dusty American southwestern deserts, these images represent the greatest luxury in community and collaboration. I work consistently with a select few, allowing for our points of interest to transform and steadily build upon themselves. Part of the shoot is going to take place in my room here in LA. It's a very personal space; it's where I get to try, and also fail, and then hopefully succeed. I feel like I need to pay respect to the space that's given me a lot of freedom and that’s always been somewhere I can come back to. I've been saving the idea to shoot in this room, and I’m happy it’s found a home at <DAZED> Korea.</p>
+        </div>
+
+          <div class="grid-item" id="sasha">
+          	<h2>♡ Sasha Gordon ♡</h2>
+          	<h3>My body is the canvas painted with my thoughts, emotions, and experiences.</h3>
+          	<h4><strong>Text</strong> Sarah Yeonkyung Choi</h4>
+          	<p>On a New York Time Saturday morning, Sasha Gordon appeared on my Zoom screen with black rectangular-framed glasses and the biggest, most inviting smile. Although we were meeting for the first time, it felt like I was catching up with an old friend. The first thing she said to me was, “I’ve never been to Korea! What’s the weather like these days?”</p>
+          	<p>Sasha Gordon is a twenty-six-year-old painter from Sommers, New York, currently living and working in Brooklyn. A 2020 RISD graduate, she is now represented by Matthew Brown Gallery, where she paints her feelings out, pouring out onto canvas her experiences growing up as a larger-bodied Asian American woman. In 2022, I saw Sasha Gordon’s work for the first time at Jeffrey Deitch in New York. Her vibrant, hyper-realistic variations of herself in surreal, fever-dream-like compositions left me spellbound. Each detail, down to every individual strand of hair, felt palpable to the point that the hairs on my arm rose up.</p>
+          	<p class="question">I can imagine that presenting yourself as a subject is not easy. Did you initially have reservations or did you feel compelled to do so from the start?</p>
+          	<p>For a while, I didn’t know what I wanted to paint about. I was confused about what style I wanted and what stories I wanted to tell. At first, I was painting solely based off of technique, and then in college, I painted a bathhouse scene. It was very vulnerable because it was the first time that I painted myself nude. I thought it would be more nerve-wrecking, but I felt pretty nonchalant about it.</p>
+          	<p class="question">That’s a bold move. </p>
+          	<p>I was timid at first because not many people in my school were painting themselves naked, but I found it freeing. For me, my likeness serves as a vehicle to express a language that I can’t speak. I get asked all the time, ‘Is this you?’ or ‘Are these your doppelgangers?’ but I see them rather as characters in this world who aren’t complete representations of myself.</p>
+          	<p class="question">In a past interview, you mentioned that even as more and more people connect with your work, you struggle to see yourself as a role model. Is that still the case today?</p>
+          	<p>Yes, it’s really weird. I get recognized maybe once a week, and I find it funny because I’m a painter and not a huge actor or anything. It’s hard for me to take it seriously because even though it is a job, painting still feels like a hobby to me. Painting comes very naturally to me. When I’m painting, I’m on autopilot. I don’t think twice about colors, for instance.</p>
+          	<p class="question">What about composition? Do your scenes come to you all at once, like in a dream, or do they come together gradually, piece by piece?</p>
+          	<p>Sometimes it’s a complete vision or idea that comes to mind. For example, the idea struck me to paint a person made entirely from a sweater material, with her arms bound together. Other times, I have the scene in my head and do some visual research. I’ll look at movies for their compositions and lighting because I want my paintings to have a cinematic quality, as if they were stills taken from a movie. There’s not always a rule to them. Things just have to feel right.</p>
+          	<p class="question">You imagine yourself as a volcano, a cat, a marshmallow, Botticelli’s Venus. Do you think of yourself as a shapeshifter or is there one motif that you identify most with?</p>
+          	<p>Currently, I’m returning to painting flesh. That’s what I’m most attracted to, but my work always reflects what I’m going through and how I’m feeling. I’ve had moments of depersonalization, to go back to the role model thing. People develop parasocial relationships with me, and when I started to get recognized, I felt dehumanized because people saw me more as a figure than as a person. That’s when I painted those anthropomorphic, transformative variations of myself. But I didn’t realize how much I missed painting flesh, and I’m returning to painting naturalistic skin colors in a classical way, rather than neon colors.</p>
+          	<p class="question">Did you have a reason for painting neon skin before?</p>
+          	<p>Yes, at the time, I wanted to show emotion through more than just facial expressions. I wanted the figure to be read indirectly, slowly. To give you an example, there would be a figure with an upset expression, but their skin color would be a calm, pale blue, so you could sense their mixed feelings. I love using color, but I’m currently enjoying going back to my roots, to classical artists like Caravaggio.</p>
+          	<p class="question">Was he your favorite artist growing up?</p>
+          	<p>I think everyone loves Caravaggio [laughs]. My favorite artists are usually contemporary. I love Lisa Yuskavage. I studied abroad in Rome, and being surrounded by so much historical classical art made me crave contemporary art. My colors got more and more neon, and my work, more contemporary-looking. Now that I’ve been doing such contemporary work, I have nostalgia for classicism.</p>
+          	<p class="question">You purposefully clothe your subjects in itchy materials because you want viewers to feel discomfort. What role does clothing play in your work?</p>
+          	<p>Growing up, I felt like a shapeshifter because I was always following trends. When Juicy Couture was popular, I bought 16 tracksuits!</p>
+          	<p class="question">Me too! [laughs] I bought 3.</p>
+          	<p>You too?! [laughs] I was always aware of my body, and I wanted to feel good, but it was a challenge to find clothes that I liked in my size. Because I felt so much discomfort with clothes, when I paint them, I realize how heavy the context is—the brand, the level of femininity or masculinity...I’ve been painting nude figures more and more because I think it shows them in their purest form. Clothing, or the lack thereof, is an expression of comfort and discomfort.</p>
+          	<p class="question">What kind of clothes do you identify with the most and why?</p>
+          	<p>I’m going to shoutout a brand called Tank Air. They’re from Thailand, but based in LA, and while their clothes are casual, they can be dressed up. I also love Gap, and when I splurge, I love a Jean Paul Gaultier mesh top, like the one you are wearing.</p>
+          	<p class="question">I heard! I wore my best Jean Paul Gaultier for you. Back In 2022, I saw your work in the group show ‘Wonder Woman’ at Jeffrey Deitch, curated by Kathy Huang, and exploring the experiences of 30 female Asian American artists. How did it feel to be a part of a show like that?</p>
+          	<p>It was great! I think it was the largest of its kind at that time. I’m friends with Kathy, and she worked very hard on the curation. I didn’t know that many Asian painters growing up, and for most group shows, I’m usually the only Asian artist, so it felt nice to feel free in a space where we are all some type of Asian American. Sometimes my work is directly about my background and identity, and in this context, I felt that I didn’t have to explain myself and that the work didn’t have to be solely about my identity. Recently, it’s been more about the experiences that I've had and how they affect me. </p>
+          	<p class="question">Looking ahead, what changes would you like to see in people’s perceptions towards Asian and Asian American culture?</p>
+          	<p>I always notice that people treat Asian women as disposable or don’t listening to them. I’ll see my mom be mistreated, and I’ve been mistreated by people. People feel like they can say anything to me, and I’d like to see that change.</p>
+          	<p class="question">You’ve done a lot of interviews, but this is your first one that is catered towards a non-English-speaking audience. Is there anything you would like to say to Dazed Korea’s readers? </p>
+          	<p>I’d love to visit Korea! I’m planning on going soon. I think I would make some important paintings after. I still feel very American, so I’d love to learn more. I’d love to go with my mom since she hasn’t been back since the 80s. My brother actually went for the first time recently, and he loved it. He said the food was great!</p>
+    	  </div>
+     </div>
+    </div>
+
+ <!-- korean -->
+    <div class="content kr">
+      <button class="language-button" id="krButton">kr</button>
+      
+      <div class="header">
+      <p><span id="sarah"></span></p>
+      <table>
+        <tr id="anchor">
+          <th><a href="#lara2">♡ 라라 비올레타</a></th>
+          <th><a href="#sabu2">♡ 사부카루</a></th>
+          <th><a href="#sophia2">♡ 소피아 알바레즈</a></th>
+          <th><a href="#sasha2">♡ 사샤 고든</a></th>
+        </tr>
+      </table>
+      </div>
+
+      <table>
+        <tr>
+          <th>사이트</th>
+          <td><a href="https://sarahjoy.fr">sarahjoy.fr</a></td>
+        </tr>
+        <tr>
+          <th>이메일</th>
+          <td id="emailCell">sarah@dazedkorea.com</td>
+        </tr>
+      </table>
+
+      <div class="grid-item" id="lara2">
+            <h2>♡ 라라 비올레타 ♡</h2>
+            <h3>매거진을 사랑하는 세라와 라라.<br><데이즈드>에서 나눈 <Violet Papers> 이야기.</h3>
+            <h4><strong>Text</strong> 세라(Sarah, 최연경)</h4>
+            <p>아마 라라 비올레타Lara Violetta만큼 매거진을 사랑하는 사람은 없을 것이다. 아빠가 패션 출판 업계의 아트 디렉터였던 이유로 어린 시절 인쇄된 종이 냄새를 맡으며 자랐다. 매거진 속 모든 여자에 빠져들었고, 하이힐을 신고 학교에 갔다. 하이힐은 라라의 심장을 뛰게 했다.</p>
+            <p>라라는 파리에 거주하는 독일인으로 우연한 기회에 크리에이터가 되었다. 4년 전 파리에 그래픽디자이너로 와서 코로나19 기간에 유튜브 채널을 시작하고, 한 달 전 <바이올렛 페이퍼스Violet Papers> 매거진을 출판하며 편집장도 겸하고 있다. 창간호 테마 ‘What’s Inside’에서는 거대한 데이제르D’heygere 귀고리를 하고, 입에는 메이크업 브러시를 물고, 손에는 디올 아이섀도 팔레트를 들고, 실버 발렌시아가 모토사이클 백을 땅바닥에 놓고 파리의 회색 길바닥에 웅크리고 있는 라라의 모습을 볼 수 있다. 어디를 가든 매거진을 들고 다니는.</p>
+      		<p class="question">많은 사진이 파리의 거리가 배경이에요. 파리를 진정 사랑하는 마음이 느껴져요.</p>
+            <p>도시는 항상 제게 많은 영감을 줘요. 제가 파리를 좋아하는 이유는 자신만의 세계에 푹 빠져 있어도 아무도 관심을 두지 않는다는 점이에요. 도시는 늘 빠르게 변화하고, 시끄럽고, 쉽게 만족할 수 없지요. 그런 분위기 속에서도 고요함을 발견할 수 있는데, 저는 바로 그 순간을 찍는 것이 좋아요.</p>
+            <p class="question">정말 우연한 계기로 크리에이터가 되었다면서요.</p>
+            <p>평소 사진 찍는 데 관심이 많고 콘텐츠 제작도 좋아했는데, 인플루언서가 될 거라고는 전혀 생각지 못했어요. 첫 유튜브 영상 제작이 너무 재미있어서 계속 올리게 되었죠. 시간이 지나 인스타그램에도 올려야겠다 생각했고, 반년 만에 인기를 끌게 되었어요.</p>
+            <p class="question">크리에이터, 편집장, 그래픽디자이너 중에서 선택한다면.</p>
+            <p>모두요! 한 가지로 규정하는 것은 꽤 구식이라고 생각해요. 제가 좋아하는 일을 하는 데다 다양한 장르를 오갈 수도 있어 기뻐요. 요즘 브랜드는 크리에이터를 인재로 생각하고 긴밀한 관계를 구축하고 있어요.</p>
+            <p class="question">크리에이터에 대한 브랜드 접근 방식이 어떻게 변화했나요.</p>
+            <p>요즘 브랜드에서 중요한 것이 바로 딱 맞는 크리에이터를 찾는 일이에요. 브랜드와 잘 맞는 크리에이터가 서로 오랫동안 관계를 이어오는 경우를 많이 봤어요. 서로의 성장에 도움이 되는 일이지요. 요새 브랜드는 크리에이터가 해당 콘텐츠를 제작하는 것 이외에 본인의 목표를 추구하는 것을 높이 평가해요. 브랜드와 신뢰 관계가 구축되어 있으면 브랜드는 크리에이터 자체를 지지하고, 그때야말로 협업 효과가 가장 좋은 것 같아요.</p>
+            <p class="question"><Violet Papers> 첫 호를 통해 디지털 형식을 프린트물로 전환하는 탐색을 하고 있어요. 오늘날 미디어 환경에서 각각의 역할을 말해 본다면.</p>
+            <p>저는 프린트 매거진이 결코 사라지지 않을 것이라고 생각해요. 젊은 크리에이터들이 여전히 프린트 매거진을 보고 있는 모습을 보고 깜짝 놀랐어요. 저도 위험을 감수한 거라 확신하지는 못했거든요. 사람들이 프린트 매거진에 감정적 애착을 가지고 있어 행복했어요. “늘 콜라주를 했어요” 같은 메시지를 많이 받았거든요. 프린트 매거진은 크리에이티브의 시작점이고, 콘텐츠의 수명을 늘려주니 너무 좋은 일이죠. 프린트 매거진은 절대 없어지지 않을 거예요!</p>
+            <p class="question">첫 호의 제작 과정이 궁금해요.</p>
+            <p>아무것도 없는 상태에서 매거진을 처음 만들다 보니 광고주들의 신뢰를 얻어야 했고, 그게 어려웠어요. 처음에 제시한 PDF 파일은 그저 제 생각이 담겨 있을 뿐이었거든요. 첫 번째 광고주를 만났을 때 겸손할 수밖에 없었어요. 사람들이 특히 디지털 형식을 프린트물로 바꾸는 것이나 패션 팟캐스트나 빈티지 매장 같은 새로운 형태의 광고에 대해 매우 우려를 표시했거든요. 가장 어려웠던 것은 첫 번째 광고주를 설득하는 일이었어요. 그러고 그다음 광고주를 또 설득하고, 낚시처럼. 다음 물고기를 잡으려면 한 마리는 있어야 하잖아요.</p>
+            <p class="question">로라 & 디아나 패닝Laura & Deanna Fanning은 원래 프린트 매거진에 광고를 하지 않는데, 이번엔 예외였죠.</p>
+            <p>맞아요, 저는 아직도 믿을 수 없어요. 제가 너무나 존경하는데, 이번에 더 감동받았어요. 첫 호의 이슈에 맞춰주기까지 했으니까요. ‘What’s Inside’에 관한 것으로, 신발 만드는 과정을 보여주는 광고를 제작해 주었어요. 정말 행운이구나 싶었죠.</p>
+            <p class="question">가장 긴밀하게 협력하는 브랜드 중 하나인가요.</p>
+            <p>네, 처음부터 저를 믿어줬거든요. 크리에이터로 커리어를 막 시작하는 시기에 그들 쇼에 참석하면 끝나고 늘 너무 친절하게 대해줬어요. 무대 뒤에서 무드보드와 디자인 작업 과정을 볼 수 있고, 그들의 작업이 복합적이어서 존경스러웠어요. 패브릭을 다루고 재단하는 방식이 매우 뛰어나죠. 제가 가장 좋아하는 브랜드 중 하나랍니다. 제가 말한 것처럼 브랜드 또는 디자이너와 가질 수 있는 가장 좋은 관계인 것 같아요.</p>
+            <p class="question">창간호 발행과 더불어 프린지 스트랩 백인 ‘페이퍼 백The Paper Bag’을 출시했어요.</p>
+            <p>필요는 발명의 어머니잖아요. 페이퍼 백은 매거진을 들고 다니는 것을 좋아하는 제게 꼭 필요한 것이었어요. 연간 발행 부수가 적어지면서 매거진이 두꺼워졌죠. 약속이 있을 때마다 가장 큰 가방을 메고 싶지는 않았고, 또 다른 가방엔 매거진을 넣기가 어려웠어요. 저는 가방 형태가 매거진의 크기에 따라 변하는 것이 중요하다고 생각했죠. 게다가 인플루언서들은 실제로 매거진을 읽는 대신 들고서 사진만 찍는 것으로 여기는데, 그래서 역으로 생각해 매거진과 매거진을 액세서리처럼 착용할 수 있는 백을 만들어본 거예요.(웃음)</p>
+            <p class="question">모든 디자인 과정에 참여했나요.</p>
+            <p>그럼요, 앤트워프에서 공부한 남자친구는 정말 대단한 디자이너예요. 처음엔 두 가지 다른 버전이 있었는데, 둘이 같이 작업해 지금의 모습을 완성했어요.</p>
+            <p class="question">무엇이든 과포화 시대에 어디에서 영감을 얻나요.</p>
+            <p>거의 대부분 매거진에서요. 아, 틱톡에서도요. 그런데 영감은 어디에서나 얻을 수 있고, 그러니 뭐가 됐든 조금씩 관심을 갖는 게 중요해요. 틱톡일 수도 있고, 매거진일 수도 있고. 그런데 매거진에선 알고리즘으로 선택되지 않는 수많은 멋진 것을 발견할 수 있어요. 그렇지만 핀터레스트나 텀블러도 좋아해요. 전 영원한 ‘텀블러 걸’이에요.</p>
+            <p class="question">메이크업이 미니멀하면서도 실험적이에요. 길을 걷다 영감을 얻나요, 아니면 그날그날 아침 기분에 따라 다르게 하나요.</p>
+            <p>둘 다요! 저는 너무 깊이 생각하지는 않으려고 해요. 머릿속에 이미지나 아이디어가 있어도 너무 집착하지 않으려고 하고요. 그러다 보면 잘 나오지 않거든요. 시도하고 실패하는 과정이 중요해요. 보통 많이 실패하는데, 사람들이 보지 못할 뿐이에요. 하지만 꾸준히 원하는 것을 찾아 노력하고, 특히 컬러에 대해 그래요. 시간이 걸리죠. 사실 작년 9월에 서울에 갔을 때 들른 올리브영이 엄청 그리워요!</p>
+            <p class="question">서울의 첫인상은?</p>
+            <p>에너지가 좋았어요. 사람들 모두 옷도 잘 입고요. 매우 개방적이라고 느꼈어요.</p>
+      </div>
+
+      <div class="grid-item" id="sabu2">
+            <h2>♡ 사부카루 ♡</h2>
+            <h3>두 세계의 만남.</h3>
+            <h4><strong>Text</strong> 세라(Sarah, 최연경)</h4>
+            <p>친구 앤디가 <사부카루Sabukaru> 게시물에 소개된 날, 그의 전 애인이 대뜸 전화해 소리를 질렀다. ‘내가 가장 좋아하는 잡지에 네가 나오다니!’ <사부카루>는 도쿄 기반 온라인 매거진으로 지난 5년간 서브컬처를 다뤄왔다. 아드리안 비앙코Adrian Bianco는 <사부카루>의 편집장, 크리에이티브 에이전시인 비앙코 비앙코Bianco Bianco의 창립자, 그리고 또 다른 디지털 잡지인 <가타Gata>의 크리에이티브 기획자까지 역이마고 있다. (<가타>의 편집장은 마르타 에스피노사Marta Espinosa이다.) 비앙코는 일본 애니메이션, 특히 <드래곤볼>, 하드코어 온라인게임, 라멘에 대한 사랑으로 독일에서 도쿄로 이주했다. 5월에 8디비전에서 열린 <사부카루> 팝업 덕분에 <데이즈드>와 <사부카루> 세계가 격돌했다. 헬무트 랭 죄수 바지와 릭 오웬스 하이톱 라몬즈 스니커즈와 선글라스를 착용한 그는 오히려 우리의 관심에 매우 고마워했다.</p>
+            <p class="question">외국인으로서 일본 문화를 바라보는 독특한 관점이 따로 있다고 생각하나요.</p>
+            <p>그건 확실해요. 일본 사람들이 흥미를 갖지 않는 것을 우리가 다루곤 하죠. 외부인의 관점에서 보면 호기심의 시선이 다르기 때문이고, 그들은 우리의 작업을 좋아해요. 누가 독일에 대해 좋아하는 점을 말하라고 하면 저도 30초면 끝나지만, 독일에 온 외국인은 분명 더 오래 이야기할 수 있을 거예요.</p>
+            <p class="question">맞아요! 제가 함부르크에서 잠시 일할 때 그곳의 매력에 푹 빠졌는데, 동료들은 오히려 제 발견이 재미있다는 반응이었어요. <사부카루> 팀원은 전 세계 각국에서 왔고, 심지어 독자였던 에디터도 있다고 하던데, <사부카루>를 소개해 주세요.</p>
+            <p>저는 재능이 별로 없다고 생각하지만, 유일한 재능은 능력 있는 사람들을 찾아서 한군데 모으는 것이에요. 매거진을 만들기 전에는 블로그를 운영했는데, <사부카루>의 버팀목이 되어준 열혈 독자들이 몇 분 계셨어요.(웃음) 그러다 우리 팬이 눈덩이처럼 불어났죠. <사부카루>는 여성들이 대부분 주도하고 있어요. 가끔 여성의 노출이 심한 콘텐츠를 올리다 보니 남성의 시각으로 만든다고 생각하기 쉬운데, 실제로는 여성 에디터가 주도해 만들어요. <사부카루>는 유기적으로 변화하고, 팀이 늘 투명하게 공개되고 있어요.</p>
+            <p class="question"><사부카루>와 <가타>, 두 매거진을 전개하면서 어떤 콘텐츠가 어디에 더 적합한지는 무얼 기준으로 결정하나요.</p>
+            <p><가타> 매거진을 에지 있는 애인으로 묘사해요. <사부카루>도 마찬가지라고 생각하지만, <가타>가 더 뚜렷하게 색깔이 드러나는 것 같아요. 두 매거진의 주제는 큰 범주 안에서 유기적으로 연결되는 편이에요. 어떤 에디터는 <가타>와 <사부카루>에 모두 참여하고, 어떤 에디터는 둘 중 한 매거진에만 콘텐츠를 기획하고요. 모든 에디터가 본인이 맡은 기획에 집중하다 보니 자연스럽게 두 매거진이 독립적으로 성장해 나가고 있어요.</p>
+            <p class="question">‘사부카루 걸’은 어떤 브랜드를 즐겨 쇼핑하고, 어떻게 하루를 보낼까요.</p>
+            <p>로고 없는 미우미우, 키코 코스타디노브 X 아식스 발레리나 슈즈, 스타킹에 짧은 치마를 즐겨 입어요. 대중적인 패션을 참고하지만, 브랜드보다 디자인에 관심이 많고, 브랜드가 드러나는 걸 좋아하지 않죠. 저희 팀의 오라와 야스미나가 떠오르네요. 오라는 아침에 커피를 마시지 않으면 시동이 안 걸린대요. 그들은 깃사텐 (喫茶店, 작은 커피숍)에 혼자 앉아 3시간 동안 추상적인 책을 읽으며 현실 도피를 하겠죠. 밤에는 가장 힙한 파티에서 기분 좋을 정도로만 한두 잔 마시며 한두 시간 머물러요. 버터를 자르는 따뜻한 나이프처럼, 날카롭지만 누구에게나 친절해요. 거만하지도 않고 다른 사람들보다 높은 위치에 있다 생각하지도 않아요. 앞에 있는 누구든 무슨 주제든 자유롭게 이야기해요.</p>
+            <p class="question">‘사부카루 걸’의 현재 목표와 우선순위는 무엇인지.</p>
+            <p>자신이 사랑하는 일들을 하는 거요. <사부카루>는 전형적인 직업 대신 의미 있는 일을 찾는 현세대의 좋은 예라고 생각해요. 자신이 관심 있는 일을 하며 시간을 보내는 것. ‘잡지를 읽은 사람 대 잡지를 만드는 사람’에 대한 밈을 보셨나요.</p>
+            <p class="question">네, 팀원들과 공유했죠!(웃음)/p>
+            <p>잡지사에서 근무하는 건 약간 자신을 괴롭히는 일이긴 하지요. 더 편한 삶을 선택할 수도 있지만, 스스로 선택한 일이잖아요.</p>
+            <p class="question">프로젝트에 대한 열정은 어떻게 유지하나요.</p>
+            <p><바이스Vice>에서 일하는 동안 베를린에 있었기 때문에 <하이스노바이어티Highsnobiety>의 성장을 지켜봤어요. 덕분에 두 매거진에서 많은 것을 배울 수 있었고요. 매거진의 목표가 수익으로만 연결된다면 콘텐츠에 문제가 생긴다고 생각해요. <사부카루>에서는 항상 저희가 좋아하는 것들에 대해 글을 써요. 그래서 다음에 무엇을 할지에 아이디어나 창의성이 고갈되는 일은 절대 없어요. 그렇기에 더더욱 인내심을 갖고 시간이 부족하다는 것에 스트레스를 받지 않아야 할 필요가 있고요. 저희 에이전시 비앙코 비앙코가 재정적으로 <사부카루>를 뒷받침하기 때문에 독립성을 유지할 수 있어요. 저는 항상 <사부카루>를 해적단에 비유하죠. 저희는 미치광이처럼 일하지만, 사무실에 두 개의 다른 에너지가 있다는 것에 감사해요.</p>
+            <p class="question">서브컬처가 탄력을 받고, 특히 니치 감성이 틱톡에서 빠르게 성장하면서 <사부카루>의 인기가 대중화되는 점에 대해 걱정이 있나요.</p>
+            <p>서브컬처는 틱톡과 인스타그램 등에서 수백만 조회수를 기록할 만큼 쉽게 퍼질 수 있는 콘텐츠이기도 해요. 하지만 저희는 그렇게 하지 않고 있어요. 항상 서브컬처를 더 깊게 파고들고, 글도 길게 써요. 알고리즘이 저희 콘텐츠를 빠르게 소비하지 않도록 할 거예요. 오히려 서브컬처가 인기를 얻으면서 <사부카루>의 정체성을 다지는 데 도움이 되었어요. 저는 이 부분이 중요하다고 생각하고, 이러한 점이 사그라지지 않을 것으로 생각해요. 빠른 속도로 주목받는 콘텐츠는 필연적으로 더 깊이 파고들고 싶어 하는, 호기심 많은 사람들을 만들어내잖아요.</p>
+            <p class="question">전 세계 독자에게 다가갔고, 최근에는 중국과 한국으로 확장했어요. 범아시아적 아이덴티티가 등장할 것으로 보나요.</p>
+            <p>100% 그렇다고 생각해요. 저희 팀은 일본에 온 지 이제 5년이 됐는데, 문득 한 걸음 물러서 보니 제가 일본에 사는 게 아니라 아시아에 살고 있더라고요. 예를 들어 인도네시아와 태국 등 동남아시아에서 무언가 시작되고 있는 게 보여요. 저는 그런 태동하는 현장을 취재하고 싶어요. 한국에도 서서히 진출하고 있는데, 내년에는 더 큰 성장을 이룰 수 있을 것 같아요.</p>
+            <p class="question">태국에 오래 있던 제 친구가 더 퓨처 이즈 레이디보이The Future is Ladyboy와도 알고 있다고 하더군요.</p>
+            <p>날린은 최고예요. 곧 날린과의 인터뷰도 공개될 거예요. 전반적으로 태국 방콕은 지금 엄청 관심이 집중되고 있어요.</p>
+            <p class="question">많은 신생 브랜드와 함께 일하는 것으로 알고 있어요.</p>
+            <p>파리에서 쇼룸을 운영하고 있는데, 대부분 신진 디자이너들만 소개해요. 신생 브랜드의 시작을 지원하고 새로운 세대가 시작할 수 있도록 영감을 주는 것은 매우 중요해요. 오늘 저는 루카 해머스Luca Hamers를 입고 있어요. 특별히 페르소나가 담긴 브랜드여서 개인적으로 저만의 것이라는 느낌이 더 많이 들어요. 이 설렘이 독자들에게도 전해졌으면 좋겠어요. 앞으로 <사부카루>가 신진 디자이너를 주로 발굴하는 플랫폼으로 남았으면 해요.</p>
+            <p class="question">루카 해머스는 8디비전에 참가한 세 브랜드 중 하나죠.</p>
+            <p><strong>루카 해머스Luca Hamers</strong>는 런던에 거주하는 네덜란드 디자이너예요. 센트럴 세인트 마틴스에서 공부했고, <사부카루>에서 그의 졸업 작품을 소개하기도 했죠. 어두운 기능성 패션으로 아크로님Acronym과 릭 오웬스Rick Owens가 아이를 낳았다면 이런 모습이지 않을까 싶어요.</p>
+            <p><strong>얼라이브 폼Alive Form</strong>은 도쿄에 기반한 싱가포르 디자이너 핑Ping의 3D 슈즈 브랜드예요. 지난 3년 동안 많은 3D 프린팅 브랜드를 봤는데, 대부분 3D 프린팅을 사업 확장을 위한 하나의 모델로 생각해요. 하지만 핑은 미적인 것을 우선시하는 디자이너로, 단지 그의 표현 방식이 3D 프린팅일 뿐이에요.</p>
+            <p><strong>더 슈가 펀치The Sugar Punch</strong>는 그래픽디자이너이자 만화 오타쿠인 슈가Sugar의 애니 굿즈 브랜드예요. 그는 패션업계에서 15년 동안 수많은 유명 브랜드와 작업했지만 드러나지 않은 전설 같은 인물이에요. 비싸지만 손에 쥐는 순간 고급스럽다는 것을 알 수 있어요. 애니메이션 프린트가 들어간 비즈빔 품질이랄까.</p>
+            <p class="question">비유를 정말 잘하네요.</p>
+            <p>그게 제 두 번째 재능이죠.(웃음)</p>
+            <p class="question">마지막으로 <사부카루>의 인스타그램 피드는 어떻게 큐레이션하나요.</p>
+            <p>3000개 게시물 중 99.9%는 제가 직접 올렸어요. 스케줄링 도구가 있기 전에는 마르타와 제가 모든 게시물을 하나하나 업로드했어요. 제게는 교향곡처럼 <사부카루> 콘텐츠를 보면 무언가 들리고 D음이 있으면 A음을 추가하게 되죠. 예상치 못한 콘텐츠가 나올 수 있다는 점이 마음에 들어요. 팔로어를 잃는 것도 좋은 일이라고 생각해요. 종종 사람들이 저희 게시물을 이해하지 못하거나 좋아하지 않는 경우도 있더라고요. 인스타그램 계정을 수프를 끓이는 것처럼 다뤄야 한다고 생각해요. 수프를 끓이다가 국물이 졸아들면 수프가 더 맛있어지잖아요. 커뮤니티가 항상 성장을 대변하는 것은 아니에요.</p>
+      </div>
+
+      <div class="grid-item" id="sophia2">
+            <h2>♡ 소피아 알바레즈 ♡</h2>
+            <h3>LA, 뉴욕, 파리를 오가는 잇 걸 소피아와 시간을 멈추는 연습을 하다.</h3>
+            <h4><strong>Text</strong> 세라(Sarah, 최연경)</h4>
+            <p>소피아 알바레즈Sophia Álvarez는 LA, 뉴욕, 파리를 종횡무진하는 젊은 아티스트다. 파리를 가장 선호하지만. 앙팡 리쉬 데프리메Enfants Riches Déprimés 런웨이나 좋아하는 패션 잡지에서 소피아의 멋진 자태를 보았을 수 있지만, 아마 인터넷에서는 분명 봤을 거다. 소피아는 ‘iconic cool’ 그 자체이다.</p>
+            <p>볼드한 목걸이를 레이어링하고 헝클어진 머리카락을 휘날리며 LA 공항에서 오자마자 줌 화면을 켰다. 인터뷰를 끝내자 한 동료가 다가와 개인적으로 소피아가 어땠는지 물었다. “최근 본 사람 중 가장 쿨한 것 같아!” 정말 소피아에게는 뭔가가 있다. 설명하기 어려운 그 무언가. 그 je-ne-sais-quoi.</p>
+            <p class="question">ERD 모델은 어떻게 하게 되었나요.</p>
+            <p>원래 계획했던 건 아니에요. 순식간에 일어난 일이죠. 개인적으로 인연이 되는 일이 따로 있다고 생각해요. 오랫동안 함께 일한 친구 다비드 앙리를 통해 ERD와 함께 일을 하다 자연스럽게 모델을 하게 되었어요. 당시 뉴욕에 살고 있었는데, 때마침 파리에 잠깐 머문 것도 완전 우연이었어요. 한 번 촬영하고 보니 너무 좋더라고요. 순간적인 케미가 잘 맞으면 나머지는 설명할 필요가 없죠. 그냥 저절로 되거든요.</p>
+            <p class="question">ERD의 2024년 가을/겨울 컬렉션을 끝마친 소감이 궁금해요.</p>
+            <p>아, 너무 좋아요. 파리의 추위는 장난이 아닌데, 세상에 드레스가 메탈이지 뭐예요. 무대 뒤에서 헤어드라이어로 메탈 드레스를 따뜻하게 데우기도 했어요. 게다가 얼마나 무겁던지. 아마 23kg쯤? 정확하진 않지만 메탈 조각 1만 개는 붙여 만들었을 거예요. 그래도 매우 영광스러웠어요. 세밀히 조정하기 위해 스튜디오와 끊임없이 의견 교환을 했어요. 소규모 팀이고 모두가 서로를 신뢰하죠. 제가 하는 모든 일을 늘 지지해 줘요. 친절하기도 하고. 제가 브랜드의 쿠튀르 쪽을 좀 좋아해요. 잘하기도 하고요. 그들과 함께해 기뻐요.</p>
+            <p class="question">솔직히 제 꿈의 드레스예요! 멧갈라Met Gala에 초대받는다면 입을 꿈의 드레스나 함께 작업해 보고 싶은 디자이너가 있나요.</p>
+            <p>웨딩드레스보다는 멧갈라 드레스를 더 많이 상상해요. 물론 커스텀으로. 당연히 메탈의 홈 브랜드인 ERD와 함께요.(웃음) 아니면 마르지엘라요! 현재 마르지엘라의 방향성은 콘셉트부터 작은 디테일까지 정교하게 잘 구현한 또 다른 차원이죠. 제가 현재 가장 높이 평가하는 브랜드예요. 꼭 필요하진 않지만 전체 스토리를 끝까지 잘 끌고 가는 느낌이 좋아요. 아니면 멧갈라에서 셰인 올리버Shayne Oliver를 보고 싶어요. 물론 테마에 따라 다르겠지만요. </p>
+            <p class="question">파리의 크리에이티브 현장은 뉴욕이나 LA 현장과 무엇이 다른가요.</p>
+            <p>요즘 LA가 다시 뜨고 있어요. 뉴욕은 요즘에 더 상업적이긴 하지만, 제가 아는 젊은 디자이너들은 모두 재능이 엄청나요. 팬데믹 때 LA에서 일을 시작했다가 뉴욕으로 이사했는데, 앙팡 리쉬 데프리메와 일하면서 파리에 자주 가게 됐어요. 제미적인 관심은 파리랑 더 잘 맞는 것 같아요. 파리에는 더 많은 플랫폼도 있고요. 일반적으로 사람들은 젊은 디자이너와 아티스트에게 관심이 많아요. 현재 젊은 세대의 에너지와 역사 깊은 전통을 섞을 수 있는 도시가 많지 않죠. 전 전통 방식도 좋아하고, 여전히 패션을 예술의 한 부분으로 존중해 줘 좋아요. 어떤 사람의 작업이 어떤지에 대해서도 더 편히 얘기하고, 굳이 같은 길에 있을 필요도 없고요. 여러 분야에서 활동할 수도 있지만 여전히 일관성을 갖고 작업할 수 있죠.</p>
+            <p class="question">인터넷 발달로 지리적 구분이 더 흐려지고 있나요.</p>
+            <p>한곳에 모이는 것은 매우 큰 장점이 있다고 생각해요. 저는 이사를 많이 다녔어요. 아무것도 없는 텍사스에서 플로리다까지 거의 50개 지역을요. 많은 사람이 왜 그렇게 이사를 자주 다녔는지 묻는데, 그냥 새로운 정보를 쌓아가는 것이 좋아요. 이렇게 여행을 많이 다닐 수 있다는 건 정말 행운이라고 생각해요. 제가 가장 좋아하는 것을 스펀지처럼 흡수해 다시 반대편으로 뭐가 나오는지 보는 거예요. 많은 사람이 인터넷 때문에 소셜 올림픽 같은 패션위크에 모두 참여해야 한다는 압박감을 느끼는데, 전 그걸 구독하지 않아요. 한곳에 정착할 필요는 없어요. 그렇지만 당신이 하고 싶은 것을 할 수 있는 곳에 기반을 둘 필요는 있죠.</p>
+            <p class="question">어떻게 가만히 있으면서 앞으로 나아가고 있다는 느낌을 받나요.</p>
+            <p>그게 지금 가장 어려운 장애물인 것 같아요. 유목민으로 성장하면 특정 근육이 과도하게 커져 다른 근육은 위축된대요. 살아남기 위해 노력하고 적응하기 위해 죽어라 노력을 하죠. 저는 가만히 있는 법을 배우려고 노력해요. 어떤 일은 이해하는 데 몇 년이 걸리기도 하죠. 또 어떤 일은 완벽한 순간이 있기도 하고요. 하지만 그 일이 자신에게 어떤 의미인지 깨닫는 것이 중요해요. 작업과 결과물에 만족하기보다 더 중요한 것은 없어요. 제가 좋아하는 아티스트 중에는 한 도시에 정착해 절대 떠나지 않는 사람이 있어요. 그들의 작업은 정말 훌륭해 부러울 정도예요. 너무 아름다운 일이에요. 저도 그랬으면 좋겠어요.</p>
+            <p class="question">작업에 가장 큰 영향을 미친 아티스트가 있나요.</p>
+            <p>LA에는 줄리앤 응우옌Julien Nguyen 같은 친구가 있어요. 화가인 줄리앤은 로에베, JW 앤더슨과 작업하기도 했어요. LA에 머물며 매일 집에서 그림을 그려요. 그게 그가 하는 일이고, 그게 그의 기술이에요. 도나 트로프Donna Trope는 제 멘토인데, 사진작가예요. 완전 천재죠. 한 달간 그와 같이 지내면서 많은 것을 배웠어요. 패션 쪽으로는 제 언니가 저에게 첫 패션쇼를 보여줬을 때 모든 것을 바꿔놓았죠. 모델 오마히라 모타Omahyra Mota와 함께한 장 폴 고티에 쇼로, 오마히라는 제가 본 사람 중 가장 멋있었어요. 발레에서도 영향을 많이 받았어요. 심지어 옷 만드는 법도 배웠죠. 발레복이 너무 비싸서 저만의 의상을 만들려고 했죠. 지금도 여전히 좋아하는 일이기도 해요. 그냥 ERD에서 갤러리 설치 영상처럼 했는데, 다시 발레 슈즈를 신는 건 아주 오랜만이었어요.</p>
+            <p class="question">공연 영상에 대해 자세히 알려주세요.</p>
+            <p>발레 슈즈가 있었어요. 제 마지막 공연에서 나온 것이었죠. 부상당했을 때 ‘라 바야데르’나 ‘신데렐라’ 같은 쇼를 마무리하고 있었어요. 그걸 막아준 느낌이 들었습니다. 다른 슈즈를 사고 싶지 않아 쇼가 끝날 때까지 신었는데, 춤추는 동안 상자가 발을 찔러 슈즈 전체가 피로 물들더라고요. 오래된 물건을 뒤지다 발견해 앙리에게 주었어요. 우리는 댄스에 대해 이야기하고 있었지만 실제로 춤을 추고 싶지는 않았어요. 춤을 추면 미학적으로 너무 즐거울 거라고 생각했기 때문이죠. 다른 사람들의 공감을 불러일으키는 것과 눈요기만 하는 것은 차이가 커요. 한 번에 15분짜리 공연. 저해상도 홈 비디오형 카메라로 찍는 동안 울었어요. 퍼포먼스를 런웨이 밖에서도 할 수 있다는 건 좋았지만, 댄스에 대한 제 느낌을 개인적으로 해석할 수도 있을 것 같아요.</p>
+            <p class="question">저도 댄스를 했는데, 발레 코어가 유행했을 때 슬프더라고요. 어릴 때 완벽한 발가락을 가진 발레리나가 아름다움의 전형이라고 생각했거든요.</p>
+            <p>그것에 대한 페티시화나 단순히 온라인 미학인데, 저와 댄스와의 관계는 다르네요. 저에게 댄스는 매우 잔인해요. 아름다운 만큼 피곤하죠. 2초마다 장애물을 넘는 느낌이지만 그 안에서 수많은 영감을 받았죠.</p>
+            <p class="question">피로는 당신 작업에서 흔히 엿보이는 주제예요. 여자들이 바닥에 뒹굴고, 의자에 털썩 주저앉고, 택시 안에서 서로 머리를 기댄 채….</p>
+            <p>친구가 정말 훌륭한 이미지나 작품은 시간을 멈출 수 있어야 한다고 말해 줬어요. 시간과 시간 사이이거나 과거 또는 현재와 완전히 분리되어야 하는 거죠. 답보다는 더 많은 질문을 하게 만들고, 잠시 멈추게 만드는 이미지에 늘 끌렸어요. 너무 많이 움직이기 때문에 제 앞에 무언가를 만들 기회가 있을 때 그것이 더 천천히 느껴지기를 바라요. 저도 일이 좀 느린 편이거든요.(웃음)</p>
+            <p class="question">모델, 스타일링, 크리에이티브, 공연, 패션 디자인 등을 작업해요. 그중 가장 끌리는 매체가 있나요. 이유는요.</p>
+            <p>특정 장르에 얽매이지 않으려고 노력해요. 인생 버킷 리스트가 있는데, 그 리스트에 있는 건 모두 제가 만들고 싶은 세상이에요. 시도해 보고 싶은 것이 너무 많죠. 공연을 더 많이 하고 싶어요. 댄스를 그만두고 처음 카메라 앞에 섰을 때는 너무 불편했어요. 그러다 조각을 시작했고, 어쩌다가 패션을 하게 됐어요. 하지만 저는 스타일리스트라는 단어를 쓰지는 않아요. 정말 마음에 들지 않거든요. 룩을 만든다는 의미면 좋을 것 같아요. </p>
+            <p class="question">그러면 스타일리스트 대신 쓸 단어는.</p>
+            <p>싫지는 않지만, 대부분 옷을 잘 안 입거나 어떤 브랜드와 작업할 때 아예 다른 옷으로 바꾸는 경우가 많아요. 예를 들어 누메로Numéro에는 실제로 옷이 거의 없고, 경주용 혼다와 롤스로이스 깃발로 만든 드레스가 있는 게 특징이에요. 저는 천 한 장을 계속 사용해 새것처럼 보이게 만드는 촬영을 선호해요.</p>
+            <p class="question">본인의 스타일을 설명한다면.</p>
+            <p>그때마다 제가 관심 가진 모든 것을 반영해요. 주얼리를 좋아하거든요. 가톨릭 신자로 자라서 종교가 제 스타일에 큰 영향을 미쳤어요. 일반적으로 제 스타일은 제가 살던 여러 곳의 작품을 모아 상황에 맞게 만든 뒤 제 것으로 흡수하는 것이에요.</p>
+            <p class="question"><데이즈드> 7월호 촬영에 대해 더 자세히 알려줄 수 있나요.</p>
+            <p><데이즈드>와 함께한 이번 촬영은 캐머런 맥쿨Cameron McCool과 제가 지난 1년 동안 작업한 프로젝트예요. 저희의 시간과 세계가 겹칠 때마다 같이 잠시 멈춰서 여러 아이디어를 테스트하죠. 파리부터 미국 남서부 사막까지, 커뮤니티와 협업에 대한 사진들이에요. 마음이 맞는 소수의 사람들과 꾸준히 작업하면서 저희의 관심사가 스스로 변화하고 꾸준히 발전할 수 있도록 노력해요. 촬영 일부는 여기 LA에 있는 제 방에서 진행할 예정이에요. 매우 개인적인 공간이죠. 새로운 도전과 성공을 위한. 제게 많은 자유를 줬고, 언제든 돌아올 수 있었던 공간에 특별한 애착을 느껴요. 이 방에서 촬영하려고 아이디어를 모아두었는데, <데이즈드>에 실을 수 있어 기뻐요.</p>
+        </div>
+
+      <div class="grid">
+          <div class="grid-item" id="sasha2">
+          	<h2>♡ 사샤 고든 ♡</h2>
+          	<h3>내 몸은 나의 감정, 경험, 정체성의 그릇이다.</h3>
+          	<h4><strong>Text</strong> 세라(Sarah, 최연경)</h4>
+          	<p>어느 토요일 아침, 직사각형의 검은 안경을 쓰고 매력적인 미소를 띤 사샤 고든이 줌 화면에 나타났다. 처음 인사를 나눴지만 마치 오랜 친구와 마음을 터놓고 이야기하는 것 같았다.</p>
+          	<p>뉴욕에서 사샤 고든의 작품을 처음 봤을 때 밤을 지새워도 다 눈에 담지 못할 것만 같았다. 그는 열병을 앓는 듯한 자신의 모습을 생동감 있고 극사실적으로 그려냈다. 머리카락 하나하나 소름이 돋을 정도로 섬세한 작품이었다. 사샤 고든은 RISD(Rhode Island School of Design)를 졸업하고, 현재 브루클린을 기반으로 활동하고 있는 한국계 미국인 화가다. 폴란드계 미국인 아버지와 한국인 어머니 사이에서 태어난, 체격이 큰 아시아계 아메리칸으로서의 경험은 그의 작업을 구성하는 주된 바탕이다.</p>
+          	<p class="question">자신을 주제로 작업하는 건 어때요. 처음에는 좀 망설였나요. 아니면 자신이 해야만 한다고 느꼈나요.</p>
+          	<p>한동안은 무엇을 그리고 싶은지 몰랐어요. 어떤 스타일을 원하고, 어떤 이야기를 하고 싶은지 혼란스러웠죠. 처음에는 테크닉에만 의존해 그림을 그렸어요. 그러다 대학 시절 처음으로 목욕탕에서 내 자신을 누드로 그리게 됐어요. 긴장할 줄 알았는데 막상 해보니 무덤덤하더라고요. </p>
+          	<p class="question">대담한 시도였네요.</p>
+          	<p>학교에 나체 그림을 그리는 사람이 많지 않아서 처음에는 조심스러웠지만 곧 자유로움을 느꼈어요. 말로 할 수 없었던 것을 표현하는 느낌이었어요. ‘이게 사샤인가요?’, ‘도플갱어인가요?’라는 질문을 항상 받지만, 저는 이 세상 하나뿐인 캐릭터라 생각해요. 온전한 제 모습이 아니라요.</p>
+          	<p class="question">과거 인터뷰에서 점점 더 많은 사람이 당신 작품에 공감하지만 롤 모델이 되는 건 부담스럽다고 했어요. 여전히 그런가요.</p>
+          	<p>네, 정말 이상하죠. 일주일에 한 번 정도 길거리에서 저를 알아보는 사람을 만나는데, 저는 대단한 배우도 아니고 그냥 화가이기 때문에 좀 의아해요. 직업이긴 하지만 저는 여전히 그림이 취미 같아서 더 그런 듯해요. 제게 그림은 너무나 자연스럽고, 또 그림을 그릴 때는 마치 자동 조종 장치가 켜지는 느낌이에요. 예를 들어 색을 선택할 때 저는 절대 두 번 생각하지 않거든요.</p>
+          	<p class="question">구도는요. 한꺼번에 장면이 다 떠오르나요, 아니면 조각조각 서서히 맞춰지나요.</p>
+          	<p>때때로 제 머릿속에 떠오르는 비전이나 아이디어가 있죠. 예를 들어 스웨터 소재로 팔이 묶인 사람을 그려야겠다는 아이디어가 떠오르기도 해요. 또 가끔은 장면이 생각나요. 그러면 시각적 조사를 하는데, 구도와 조명이 어떤지 보려고 영화를 찾아봐요. 제 그림이 영화 스틸 컷에서 가져온 장면처럼 보이길 원하기 때문이에요. 그냥 느낌이 와요.</p>
+          	<p class="question">자신을 화산, 고양이, 마시멜로, 보티첼리의 비너스라고 상상하기도 했어요. 자신이 변신술사라고 생각하나요, 아니면 모티브가 있나요.</p>
+          	<p>지금은 다시 살집을 그리는 그림으로 돌아가고 있어요. 제가 가장 매력을 느끼는 분야이지만, 제 작업은 항상 제가 겪는 일과 감정을 반영해요. 사람들이 저를 롤 모델로 인식한다고 말한 것처럼 비인격화되는 순간이 있었어요. 사람들은 저와 허구 관계를 형성하고, 저를 알아보기 시작했을 때 저를 한 사람이 아닌 하나의 형상으로 보았기 때문에 어떤 면에서 비인간적 느낌을 받아요. 그래서 변형된 제 모습을 그렸죠. 그런데 살집을 그리는 것이 얼마나 그리웠는지 깨닫고 이제는 네온 컬러가 아닌 전형적인 자연스러운 피부색으로 그리는 작업으로 돌아가고 있어요.</p>
+          	<p class="question">네온 컬러로 피부를 칠한 이유는 뭐죠.</p>
+          	<p>표정 대신 색으로 감정을 표현하고 싶었어요. 인물이 간접적으로 천천히 읽히길 바랐죠. 예를 들어 화가 난 표정이지만 피부색은 차분하고 옅은 파란색으로 표현해 복합적 감정을 느끼게 하는 식이었죠. 저는 다채로운 컬러를 사용하는 것을 좋아하지만, 최근에는 카라바조 같은 고전 예술가나 나의 본질로 돌아가는 것을 즐기고 있습니다.</p>
+          	<p class="question">원래부터 카라바조를 좋아했나요.</p>
+          	<p>카라바조는 누구나 좋아하는 것 같아요.(웃음) 제가 가장 좋아하는 아티스트는 보통 현대미술가예요. 그중에서도 리사 유스카바지를 좋아해요. 로마에서 유학했는데 역사적인 클래식 예술 작품에 둘러싸여 있다 보니 현대미술에 대한 갈망이 커졌어요. 제 색감도 점점 더 네온 컬러로 바뀌고 작품도 현대적으로 보이게 되었죠. 이렇게 현대적인 작업을 많이 하다 보니 이젠 고전주의에 대한 향수가 생겼어요.</p>
+          	<p class="question">보는 사람이 불편을 느끼길 바라며 일부러 피사체에 까칠한 소재의 옷을 입혔잖아요. 옷에 관해선 어떤 생각을 가지고 있나요.</p>
+          	<p>어릴 때 저는 항상 트렌드를 따라야 한다는 강박이 있었기 때문에 계속 새로운 모습을 보이려고 한 것 같아요. 쥬시 꾸뛰르가 유행할 때는 트레이닝복을 열여섯 벌이나 샀어요!</p>
+          	<p class="question">저도요!(웃음) 저는 세 벌 샀어요.</p>
+          	<p>항상 제 몸매에 신경을 많이 썼고, 기분 좋게 입고 싶었지만 마음에 드는 제 사이즈의 옷을 찾기가 어려웠어요. 옷에 대한 불편함을 많이 느꼈기 때문에 그림을 그릴 때 브랜드, 여성성, 남성성 등 맥락이 얼마나 무거운지 깨달았죠. 누드야말로 가장 순수한 형태를 보여줄 수 있다고 생각해 점점 더 많이 그리고 있어요. 옷 혹은 옷의 부재는 편안함과 불편함의 표현이에요.</p>
+          	<p class="question">지금은 어떤 옷을 가장 좋아하나요.</p>
+          	<p>탱크 에어라는 브랜드를 꼽고 싶어요. 태국이 배경이면서 LA에 본사를 둔 브랜드로, 캐주얼한 옷인데 차려입어도 멋스러워요. 갭도 좋아하고, 과시하고 싶을 때는 장 폴 고티에 메시 톱을 꺼내 입어요. 지금 당신이 입은 것처럼. </p>
+          	<p class="question">사샤가 장 폴 고티에를 좋아한다는 정보를 입수했어요. 그래서 제가 가장 좋아하는 장 폴 고티에를 입었어요.(웃음) 2022년에 캐시 황이 기획한 아시안 아메리칸 여성 아티스트 30명에 이름을 올린 경험을 탐구한 제프리 디치의 그룹 쇼 <원더우먼>에서 사샤의 작품을 봤어요. 그런 쇼에 참여한 기분이 어땠나요.</p>
+          	<p>정말 좋았어요! 당시에는 가장 큰 규모였던 것 같아요. 저와 캐시는 친구인데 큐레이션을 위해 정말 열심히 일했어요. 저는 어릴 때 아시아계 화가가 그렇게 많다는 사실을 몰랐고, 대부분 그룹전에서 아시아계 화가는 보통 저뿐이었기 때문에 모두가 아시아계 미국인 화가인 공간에서 자유롭게 느낄 수 있어서 좋았어요. 제 작품은 제 배경과 정체성을 직접적으로 표현하기도 하는데, 이런 맥락에서 저 자신을 설명할 필요도 없고 작품이 제 정체성에만 국한될 필요도 없다고 느꼈어요. 최근에는 제 경험과 그 경험이 제게 어떤 영향을 미치는지에 대해 더 많이 생각하고 있어요.</p>
+          	<p class="question">마지막으로 <데이즈드> 독자에게 하고 싶은 말이 있나요.</p>
+          	<p>한국을 꼭 방문하고 싶어요! 곧 갈 계획이기도 하고요. 한국 여행 이후에 의미 있는 그림을 그릴 것 같다는 생각이 들어요. 저는 스스로 매우 미국적인 사람이라고 생각해 한국에 대해 더 많이 배우고 싶어요. 어머니도1980년대 이후 한국에 가보지 못하셨기 때문에 어머니와 함께 가면 더 좋을 것 같아요. 제 동생이 얼마 전 한국을 처음 방문했는데, 정말 좋아했어요. 특히 음식이 맛있다고 하더라고요!</p>
+          </div>
+
+    </div>
+  </main>
+
+  <script>
+    // language toggle
+    const enButton = document.getElementById('enButton');
+    const krButton = document.getElementById('krButton');
+    const enContent = document.querySelector('.content.en');
+    const krContent = document.querySelector('.content.kr');
+
+
+    enButton.addEventListener('click', () => {
+      enContent.style.flex = '3';
+      krContent.style.flex = '1';
+      enContent.style.opacity = '1';
+      krContent.style.opacity = '0.5';
+    });
+
+    krButton.addEventListener('click', () => {
+      enContent.style.flex = '1';
+      krContent.style.flex = '3';
+      enContent.style.opacity = '0.5';
+      krContent.style.opacity = '1';
+    });
+
+    // copy email address
+    const emailCell = document.getElementById('emailCell');
+    const email = emailCell.textContent;
+
+    emailCell.addEventListener('click', () => {
+      navigator.clipboard.writeText(email)
+        .then(() => {
+          alert('email copied !');
+        })
+        .catch(error => {
+          console.error('error copying email >:(', error);
+        });
+    });
+
+// grid --> span on click
+    const enGridItems = document.querySelectorAll('.content.en .grid-item');
+    const krGridItems = document.querySelectorAll('.content.kr .grid-item');
+
+    function toggleExpandedAndImages(gridItem, wafImages) {
+      gridItem.classList.toggle('expanded');
+      const wafImgs = wafImages.querySelectorAll('img');
+      wafImgs.forEach(img => {
+        img.style.display = gridItem.classList.contains('expanded') ? 'block' : 'none';
+      });
+    }
+
+    enGridItems.forEach(item => {
+      const wafItem = document.querySelector('.content.en .grid-item#waf');
+      const wafImages = wafItem.querySelector('.waf');
+      
+      item.addEventListener('click', () => {
+        if (item === wafItem) {
+          toggleExpandedAndImages(item, wafImages);
+        } else {
+          item.classList.toggle('expanded');
+        }
+      });
+    });
+
+    krGridItems.forEach(item => {
+      const wafItem = document.querySelector('.content.kr .grid-item#waf');
+      const wafImages = wafItem.querySelector('.waf');
+      
+      item.addEventListener('click', () => {
+        if (item === wafItem) {
+          toggleExpandedAndImages(item, wafImages);
+        } else {
+          item.classList.toggle('expanded');
+        }
+      });
+    });
+    
+const textPath = document.querySelector("#text-path");
+
+const h = document.documentElement, 
+      b = document.body,
+      st = 'scrollTop',
+      sh = 'scrollHeight';
+
+document.addEventListener("scroll", e => {
+  let percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+  textPath.setAttribute("startOffset", (-percent * 40) + 1200)
+});
+
+  </script>
+</body>
+</html>
